@@ -7,11 +7,17 @@ given set of finite traces.
 The tool currently supports a list of algorithms:
 
 [1] bv_sygus -- SyGus + BitVector + enumeration
+
 [2] adt_sygus -- SyGuS + ADT + enumeration
+
 [3] fin_adt -- SMT + ADT + enumeration
+
 [4] sat -- SAT - enumeration
+
 [4a] sat_enum -- SAT + enumeration
+
 [5] guided_sat -- SAT + Graph Topological - enumeration 
+
 [5a] guided_sat_enum -- SAT + Graph Topological + enumeration
 
 An example trace file contains a set of positive and negative traces to learn an emergency alert system (eas) formula. 
