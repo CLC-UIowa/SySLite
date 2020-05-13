@@ -25,29 +25,35 @@ The trace file use a format that is described below and exists under the reposit
 'SySLite/eas-example/eas.trace'
 
 Please use the command to run eas trace example using bit-vector SyGuS encoding:
+
 \#./Driver.py -n 5 -r t.txt -a bv_sygus -dict -t eas-example/eas.trace
 
 Please use the command to run eas trace example using ADT SyGuS encoding:
+
 \#./Driver.py -n 5 -r t.txt -a adt_sygus -dict -t eas-example/eas.trace
 
 Please use the command to run eas trace example using ADT SMT2 encoding:
+
 \#./Driver.py -n 5 -r t.txt -a fin_adt -dict -t eas-example/eas.trace
 
 Please use the command to run eas trace example using SAT-encoding with enumeration mode on:
-Running an toy trace using SAT (size) Enumerator:
+
 \#./Driver.py -n 5 -r t.txt -a sat_enum -dict -t eas-example/eas.trace
 
-Please use the command to run eas trace example using SAT-encoding without enumeration mode on:
+Please use the command to run eas trace example using SAT-encoding with enumeration mode off:
+
 \#./Driver.py -s 7 -r t.txt -a sat -dict -t eas-example/eas.trace
 
 Please use the command to run eas trace example using Guided SAT Enumerator enumeration mode on:
-Running an toy trace using Guided SAT Enumerator:
+
 \#./Driver.py -n 5 -r t.txt -a guided_sat_enum -dict -t eas-example/eas.trace 
 
-Running an toy trace using SAT (without size enumeration that required specific size parameter):
+Please use the command to run eas trace example using Guided SAT Enumerator wiht enumeration mode off:
+
 \#./Driver.py -s 3 -r t.txt -a guided_sat -t eas-example/eas.trace 
 
 The Default Solver is (Z3) but user can switch to any other solver supported by py-smt:
+
 \#./Driver.py -n 10 -r t.txt -a sat_enum -dict -t eas-example/eas.trace -solver msat
 
 Example Encoding Files:
