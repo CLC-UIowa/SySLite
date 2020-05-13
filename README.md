@@ -98,3 +98,8 @@ S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
 Experiments:
 -----------
 
+Reference:
+"SYSLITE: Syntax-Guided Synthesis of PLTL Formulas from Finite Traces", FMCAD20 [under review]
+
+
+
