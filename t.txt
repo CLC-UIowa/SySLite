@@ -1,0 +1,1 @@
+(1) =>(S(failure,Y(failure)),&(!(failure),S(failure,Y(failure))))

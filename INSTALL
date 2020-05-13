@@ -1,0 +1,4 @@
+To setup SySLite please run the script
+\#./tool-setup
+
+NOTE: The tool uses a CVC4-SyS solver that currently runs only on a linux environment.  

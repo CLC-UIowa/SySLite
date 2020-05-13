@@ -1,0 +1,91 @@
+    (set-logic BV)
+    (set-option :sygus-out status-and-def)
+    (set-option :e-matching false)
+    
+    ;Trace length 
+    (define-sort Stream () (_ BitVec 5))
+    (define-fun ZERO () Stream (_ bv0 5))
+    (define-fun ONE () Stream (_ bv1 5))
+    
+    
+    (define-fun S_FALSE () Stream ZERO)
+    (define-fun S_TRUE () Stream (bvnot S_FALSE))
+    
+    ; Yesterday: X << 1
+    (define-fun
+      Y ( (X Stream) ) Stream
+      (bvshl X ONE)
+    )
+    
+    ; Once: X|-X
+    (define-fun
+      O ( (X Stream) ) Stream
+      (bvor X (bvneg X))
+    )
+    
+    ; Historically: X & ~(1 + X)
+    (define-fun
+      H ( (X Stream) ) Stream
+      (bvand X (bvnot (bvadd ONE X)))
+    )
+    
+    ; Since: Z | (X & ~((X | Z) + Z))
+    (define-fun
+    S ( (X Stream) (Z Stream) ) Stream
+      (bvor Z
+        (bvand X 
+          (bvnot (bvadd  (bvor X Z) Z ))
+        )
+      )
+    )
+    
+    (define-fun
+      bvimpl ( (X Stream) (Z Stream) ) Stream
+      (bvor (bvnot X) Z)
+    )
+    
+    (synth-fun phi ((failure Stream) (alarm Stream)) Stream
+       ((<F> Stream))
+       ((<F> Stream (
+         S_TRUE 
+         S_FALSE
+         ( Variable Stream ) 
+         (bvnot <F>)
+         (bvand <F> <F>) 
+         (bvor <F> <F>)
+         (bvimpl <F> <F>)
+         (Y <F>)
+         (O <F>)
+         (H <F>)
+         (S <F> <F>)
+       )))
+    )
+    
+    ;; Positive examples
+    (constraint
+       (and
+        (= (phi #b00001 #b00011) S_TRUE)
+        (= (phi #b01001 #b11110) S_TRUE)
+        (= (phi #b10010 #b10100) S_TRUE) 
+       )
+    )
+    
+    ;; Negative examples
+    (constraint
+       (and
+        (not (= ((_ extract 1 0) (phi #b00011 #b00000)) ((_ extract 1 0) S_TRUE)))
+        (not (= ((_ extract 2 0) (phi #b00101 #b00000)) ((_ extract 2 0) S_TRUE)))
+        (not (= (phi #b11101 #b01001) S_TRUE))
+        (not (= (phi #b11010 #b00111) S_TRUE))
+        (not (= (phi #b11110 #b10100) S_TRUE))
+        (not (= (phi #b11000 #b11101) S_TRUE)) 
+       )
+    )
+    
+    ;Example Formula:
+    ;(Infix)  failure => !(Y(!(alarm) S failure))
+    ;(Prefix) =>(failure, !(Y(S(!(alarm), failure)))
+    ;(SMTLib) (bvnot (bvand failure (Y (S (bvnot alarm) failure))))
+    
+    (check-synth)    
+

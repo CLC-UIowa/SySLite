@@ -1,0 +1,9 @@
+graphviz
+joblib
+lark-parser
+numpy
+PySMT
+scikit-learn
+scipy
+six
+networkx

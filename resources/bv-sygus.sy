@@ -1,0 +1,70 @@
+(set-logic BV)
+(set-option :sygus-out status-and-def)
+(set-option :e-matching false)
+
+;Trace length 
+;%{1}
+
+(define-fun S_FALSE () Stream ZERO)
+(define-fun S_TRUE () Stream (bvnot S_FALSE))
+
+; Yesterday: X << 1
+(define-fun
+  Y ( (X Stream) ) Stream
+  (bvshl X ONE)
+)
+
+; Once: X|-X
+(define-fun
+  O ( (X Stream) ) Stream
+  (bvor X (bvneg X))
+)
+
+; Historically: X & ~(1 + X)
+(define-fun
+  H ( (X Stream) ) Stream
+  (bvand X (bvnot (bvadd ONE X)))
+)
+
+; Since: Z | (X & ~((X | Z) + Z))
+(define-fun
+S ( (X Stream) (Z Stream) ) Stream
+  (bvor Z
+    (bvand X 
+      (bvnot (bvadd  (bvor X Z) Z ))
+    )
+  )
+)
+
+(define-fun
+  bvimpl ( (X Stream) (Z Stream) ) Stream
+  (bvor (bvnot X) Z)
+)
+
+(synth-fun phi (;%{2}) Stream
+   ((<F> Stream))
+   ((<F> Stream (
+     S_TRUE 
+     S_FALSE
+     ( Variable Stream ) 
+     (bvnot <F>)
+     (bvand <F> <F>) 
+     (bvor <F> <F>)
+     (bvimpl <F> <F>)
+     (Y <F>)
+     (O <F>)
+     (H <F>)
+     (S <F> <F>)
+   )))
+)
+
+;; Positive examples
+;Positive Trace Data
+;%{3}
+
+;; Negative examples
+
+;Negative Trace Data
+;%{4}
+
+(check-synth)
