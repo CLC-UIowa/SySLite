@@ -1,22 +1,11 @@
-# SySLite (Syntax-Guided Past-time LTL Synthesizer & Enumerator):
+# SySLite <sub>(Syntax-Guided Past-time LTL Synthesizer & Enumerator)</sub>
 
-SySLite is past-time LTL synthesis program that support a number of
-decision procedures (i.e. SAT/SMT/SyGuS based) to learn formulas from a
-given set of finite traces. 
+SySLite is a synthesis program to learn past-time Linear Temporal Logic (LTL) formulas from a finite set of example traces. These example traces should contain a set of positive and negative traces and can come from various applications (i.e, security policy logs, protocols, and execution of the system or design, etc.). Such traces usually describe the intended and unintended behavior in terms of a sequence of propositions range over time. SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS) to learn PLTL formulas.
 
 ## Build & Test
 
 1. To build, `run ./tool-setup` 
-
-The tool currently supports a list of algorithms:
-
-1. bv_sygus -- SyGus + BitVector + enumeration
-2. adt_sygus -- SyGuS + ADT + enumeration
-3. fin_adt -- SMT + ADT + enumeration
-4a. sat -- SAT - enumeration
-4b. sat_enum -- SAT + enumeration
-5a. guided_sat -- SAT + Graph Topological - enumeration 
-5b. guided_sat_enum -- SAT + Graph Topological + enumeration
+2. To run, `./Driver --help`
 
 ## Usage
 
@@ -56,14 +45,24 @@ The Default Solver is (Z3) but user can switch to any other solver supported by 
 
 `./Driver.py -n 10 -r t.txt -a sat_enum -dict -t eas-example/eas.trace -solver msat`
 
+The tool currently supports a list of algorithms and options:
+
+1. SyGus + BitVector + enumeration `bv_sygus`  
+2. SyGuS + ADT + enumeration `adt_sygus` 
+3. SMT + ADT + enumeration `fin_adt`
+4. SAT - enumeration `sat`  
+5. SAT + enumeration `sat_enum` 
+6. SAT + Graph Topological - enumeration `guided_sat`  
+7. SAT + Graph Topological + enumeration `guided_sat_enum`  
+
 Example Encoding Files:
 -----------------------
 All the proposed encoding files exist under the repository: [SySLite/eas-example/](https://github.com/CLC-UIowa/SySLite/tree/master/eas-example)
-1. eas-adt-enc.sy (\* ADT with SyGuS \*)
-2. eas-bv-enc.sy (\* Bitvector with SyGuS \*)
-3. eas-fnf-enc.smt2 (\* ADT using Finite Model Finding \*) 
+1. [eas-adt-enc.sy](https://github.com/CLC-UIowa/SySLite/blob/master/eas-example/eas-adt-enc.sy) (\* ADT with SyGuS \*)
+2. [eas-bv-enc.sy](https://github.com/CLC-UIowa/SySLite/blob/master/eas-example/eas-bv-enc.sy) (\* Bitvector with SyGuS \*)
+3. [eas-fnf-enc.smt2](https://github.com/CLC-UIowa/SySLite/blob/master/eas-example/eas-fnf-enc.smt2) (\* ADT using Finite Model Finding \*) 
 
-These encodings can be tested using off-the-shelf [CVC4SY] (https://github.com/CLC-UIowa/SySLite/blob/master/resources/cvc4) solver using the commands:
+These encodings can be tested using off-the-shelf [CVC4SY](https://github.com/CLC-UIowa/SySLite/blob/master/resources/cvc4) solver using the commands:
 `./cvc4 --lang=sygus2 --sygus-stream --sygus-sym-break-pbe FILENAME.sy`
 `./cvc4 FILENAME.smt2`
 
@@ -72,37 +71,26 @@ An example trace file is provided in file `eas.trace`.
 
 The input traces files contains alphabets, positive and negative example traces, supported operators 
 separated by `---`. 
-
+```
 p,q	//Atomic Propositions
-
-\---
-
+---
 1,1;0,0	(\* Positive Traces \*)
-
 1,0;1,0
-
-\---
-
+---
 1,0;0,0	(\* Negative Traces \*)
-
-\---
-
+---
 !,Y,O,H	(\* Enable Unary Operators in Final Formula (Optional) \*)
-
-\---
-
+---
 S,&,|,=> (\* Enable Binary Operators in Final Formula (Optional) \*)
-
-\---
-
+---
 3	(\* Synthesized Formula Size (Optional) \*)
-
-\---
-
+---
 S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
-
+```
 
 ## Experiments:
+
+[TODO]
 
 ### Reference:
 
