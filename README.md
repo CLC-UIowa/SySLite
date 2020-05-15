@@ -1,4 +1,5 @@
-# SySLite <sub>(Syntax-Guided Past-time LTL Synthesizer & Enumerator)</sub>
+# SySLite 
+<sub>Syntax-Guided Past-time LTL Synthesizer & Enumerator</sub>
 
 SySLite is a synthesis program to learn past-time Linear Temporal Logic (LTL) formulas from a finite set of example traces. These example traces should contain a set of positive and negative traces and can come from various applications (i.e, security policy logs, protocols, and execution of the system or design, etc.). Such traces usually describe the intended and unintended behavior in terms of a sequence of propositions range over time. SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS) to learn PLTL formulas.
 
