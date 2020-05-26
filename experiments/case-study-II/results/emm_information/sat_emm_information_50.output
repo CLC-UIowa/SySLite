@@ -1,0 +1,5 @@
+(1) !(emm_information_not_authenticated_and_ciphered)
+(2) =>(emm_information_not_authenticated_and_ciphered,tracking_area_update_accept)
+(3) =>(emm_information_not_authenticated_and_ciphered,tracking_area_update_request)
+(4) =>(emm_information_not_authenticated_and_ciphered,security_mode_command)
+(5) =>(emm_information_not_authenticated_and_ciphered,authentication_response)

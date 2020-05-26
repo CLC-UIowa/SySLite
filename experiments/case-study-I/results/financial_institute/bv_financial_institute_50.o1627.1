@@ -1,0 +1,37 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1627.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1627.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 21:05:01,217: INFO - *** AP:['grant', 'request']
+2020-03-25 21:05:01,218: INFO - *** +ve Traces Size:16
+2020-03-25 21:05:01,218: INFO - *** -ve Traces Size:16
+2020-03-25 21:05:01,218: INFO - *** Formula Size:3
+2020-03-25 21:05:01,222: INFO - Running SyGuS(CVC4)...
+2020-03-25 21:05:01,222: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_210501_financial_institute_50_32_sygus_unrolled_encoding.sy']
+2020-03-25 21:05:02,362: INFO - Synthesized Formula Definition b'(define-fun phi ((grant (_ BitVec 10)) (request (_ BitVec 10))) (_ BitVec 10) (bvimpl grant (Y (S (bvnot grant) request))))\n'
+2020-03-25 21:05:02,420: INFO - Synthesized Formula =>(grant,Y(S(!(grant),request)))
+2020-03-25 21:05:02,421: INFO - Time: 1.20 seconds
+2020-03-25 21:05:05,442: INFO - Synthesized Formula Definition b'(define-fun phi ((grant (_ BitVec 10)) (request (_ BitVec 10))) (_ BitVec 10) (H (bvimpl grant (Y (S (bvnot grant) request)))))\n'
+2020-03-25 21:05:05,462: INFO - Synthesized Formula H(=>(grant,Y(S(!(grant),request))))
+2020-03-25 21:05:05,462: INFO - Time: 4.24 seconds
+2020-03-25 21:05:10,557: INFO - Synthesized Formula Definition b'(define-fun phi ((grant (_ BitVec 10)) (request (_ BitVec 10))) (_ BitVec 10) (bvimpl grant (Y (S (bvnot grant) (S grant request)))))\n'
+2020-03-25 21:05:10,577: INFO - Synthesized Formula =>(grant,Y(S(!(grant),S(grant,request))))
+2020-03-25 21:05:10,577: INFO - Time: 9.36 seconds
+2020-03-25 21:05:10,617: INFO - Synthesized Formula Definition b'(define-fun phi ((grant (_ BitVec 10)) (request (_ BitVec 10))) (_ BitVec 10) (bvimpl grant (Y (bvand (O request) (bvimpl grant request)))))\n'
+2020-03-25 21:05:10,636: INFO - Synthesized Formula =>(grant,Y(&(O(request),=>(grant,request))))
+2020-03-25 21:05:10,637: INFO - Time: 9.42 seconds
+2020-03-25 21:05:10,719: INFO - Synthesized Formula Definition b'(define-fun phi ((grant (_ BitVec 10)) (request (_ BitVec 10))) (_ BitVec 10) (bvimpl grant (Y (S (Y (bvimpl grant request)) request))))\n'
+2020-03-25 21:05:10,739: INFO - Synthesized Formula =>(grant,Y(S(Y(=>(grant,request)),request)))
+2020-03-25 21:05:10,739: INFO - Time: 9.52 seconds
+2020-03-25 21:05:10,739: INFO - Total Running Time Time: 9.52 seconds
+2020-03-25 21:05:10,975: INFO - Synthesized Signatures:
+2020-03-25 21:05:10,975: INFO - (1) =>(grant,Y(S(!(grant),request)))
+2020-03-25 21:05:10,975: INFO - (2) H(=>(grant,Y(S(!(grant),request))))
+2020-03-25 21:05:10,975: INFO - (3) =>(grant,Y(S(!(grant),S(grant,request))))
+2020-03-25 21:05:10,975: INFO - (4) =>(grant,Y(&(O(request),=>(grant,request))))
+2020-03-25 21:05:10,975: INFO - (5) =>(grant,Y(S(Y(=>(grant,request)),request)))
+2020-03-25 21:05:10,976: INFO - Time: 9.79 seconds
+Dictionary Support Enabled
+WARNING: TreeLimitedRun lost 7.57s, total lost is 7.57s
+
+FINAL WATCH: 9.79 CPU 11.70 WC

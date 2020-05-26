@@ -1,0 +1,18 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1669.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1669.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 23:00:31,325: INFO - *** AP:['secure_file_open', 'secure_file_closed']
+2020-03-25 23:00:31,325: INFO - *** +ve Traces Size:80
+2020-03-25 23:00:31,325: INFO - *** -ve Traces Size:80
+2020-03-25 23:00:31,325: INFO - *** Formula Size:3
+2020-03-25 23:00:31,333: INFO - Running SyGuS(CVC4)...
+2020-03-25 23:00:31,333: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_230031_secure_file_250_160_sygus_unrolled_encoding.sy']
+2020-03-25 23:03:12,476: INFO - Synthesized Formula Definition b'(define-fun phi ((secure_file_open (_ BitVec 10)) (secure_file_closed (_ BitVec 10))) (_ BitVec 10) (bvimpl secure_file_open (Y (S (bvnot secure_file_open) (bvimpl (Y S_TRUE) secure_file_closed)))))\n'
+2020-03-25 23:03:12,513: INFO - Synthesized Formula =>(secure_file_open,Y(S(!(secure_file_open),=>(Y(TRUE),secure_file_closed))))
+2020-03-25 23:03:12,513: INFO - Time: 161.19 seconds
+2020-03-25 23:03:12,513: INFO - Synthesized Formula Definition b'(define-fun phi ((secure_file_open (_ BitVec 10)) (secure_file_closed (_ BitVec 10))) (_ BitVec 10) (bvimpl secure_file_open (Y (S (bvnot secure_file_open) (bvimpl (O secure_file_open) secure_file_closed)))))\n'
+2020-03-25 23:03:12,533: INFO - Synthesized Formula =>(secure_file_open,Y(S(!(secure_file_open),=>(O(secure_file_open),secure_file_closed))))
+2020-03-25 23:03:12,533: INFO - Time: 161.21 seconds
+
+FINAL WATCH: 783.62 CPU 3600.33 WC

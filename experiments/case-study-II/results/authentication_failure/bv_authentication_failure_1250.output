@@ -1,0 +1,5 @@
+(1) !(authentication_failure)
+(2) H(!(authentication_failure))
+(3) !(Y(authentication_failure))
+(4) !(S(authentication_request,authentication_failure))
+(5) =>(authentication_failure,O(detach_accept))

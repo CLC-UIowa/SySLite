@@ -1,0 +1,5 @@
+(1) !(paging_IMSI_and_TMSI)
+(2) H(!(paging_IMSI_and_TMSI))
+(3) !(S(rrcConnectionRequest,paging_IMSI_and_TMSI))
+(4) S(!(paging_IMSI_and_TMSI),rrcConnectionRequest)
+(5) =>(O(paging_IMSI_and_TMSI),rrcConnectionRelease)

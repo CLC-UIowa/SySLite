@@ -1,0 +1,5 @@
+(1) =>(grant,Y(S(!(grant),request)))
+(2) H(=>(grant,Y(S(!(grant),request))))
+(3) =>(grant,Y(&(O(request),=>(grant,request))))
+(4) =>(grant,Y(=>(=>(Y(TRUE),grant),request)))
+(5) S(Y(S(!(grant),request)),!(grant))

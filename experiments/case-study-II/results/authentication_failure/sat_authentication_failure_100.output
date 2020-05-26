@@ -1,0 +1,5 @@
+(1) !(authentication_failure)
+(2) =>(authentication_failure,identity_request)
+(3) =>(authentication_failure,tracking_area_update_request)
+(4) =>(authentication_failure,attach_complete)
+(5) =>(authentication_failure,attach_accept)

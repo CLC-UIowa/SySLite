@@ -1,0 +1,36 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1599.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1599.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 20:32:01,333: INFO - *** AP:['Transaction_over_threshold_performed', 'Transaction_over_threshold_approved']
+2020-03-25 20:32:01,334: INFO - *** +ve Traces Size:80
+2020-03-25 20:32:01,334: INFO - *** -ve Traces Size:80
+2020-03-25 20:32:01,334: INFO - *** Formula Size:3
+2020-03-25 20:32:01,341: INFO - Running SyGuS(CVC4)...
+2020-03-25 20:32:01,341: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_203201_bank_transaction_250_160_sygus_unrolled_encoding.sy']
+2020-03-25 20:32:01,703: INFO - Synthesized Formula Definition b'(define-fun phi ((Transaction_over_threshold_performed (_ BitVec 10)) (Transaction_over_threshold_approved (_ BitVec 10))) (_ BitVec 10) (bvimpl Transaction_over_threshold_performed (O Transaction_over_threshold_approved)))\n'
+2020-03-25 20:32:01,742: INFO - Synthesized Formula =>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved))
+2020-03-25 20:32:01,742: INFO - Time: 0.41 seconds
+2020-03-25 20:32:01,795: INFO - Synthesized Formula Definition b'(define-fun phi ((Transaction_over_threshold_performed (_ BitVec 10)) (Transaction_over_threshold_approved (_ BitVec 10))) (_ BitVec 10) (H (bvimpl Transaction_over_threshold_performed (O Transaction_over_threshold_approved))))\n'
+2020-03-25 20:32:01,815: INFO - Synthesized Formula H(=>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved)))
+2020-03-25 20:32:01,815: INFO - Time: 0.48 seconds
+2020-03-25 20:32:02,158: INFO - Synthesized Formula Definition b'(define-fun phi ((Transaction_over_threshold_performed (_ BitVec 10)) (Transaction_over_threshold_approved (_ BitVec 10))) (_ BitVec 10) (bvimpl (O Transaction_over_threshold_performed) (O Transaction_over_threshold_approved)))\n'
+2020-03-25 20:32:02,178: INFO - Synthesized Formula =>(O(Transaction_over_threshold_performed),O(Transaction_over_threshold_approved))
+2020-03-25 20:32:02,178: INFO - Time: 0.84 seconds
+2020-03-25 20:32:03,464: INFO - Synthesized Formula Definition b'(define-fun phi ((Transaction_over_threshold_performed (_ BitVec 10)) (Transaction_over_threshold_approved (_ BitVec 10))) (_ BitVec 10) (bvimpl Transaction_over_threshold_performed (H (bvimpl Transaction_over_threshold_performed (O Transaction_over_threshold_approved)))))\n'
+2020-03-25 20:32:03,483: INFO - Synthesized Formula =>(Transaction_over_threshold_performed,H(=>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved))))
+2020-03-25 20:32:03,484: INFO - Time: 2.15 seconds
+2020-03-25 20:32:03,501: INFO - Synthesized Formula Definition b'(define-fun phi ((Transaction_over_threshold_performed (_ BitVec 10)) (Transaction_over_threshold_approved (_ BitVec 10))) (_ BitVec 10) (bvimpl Transaction_over_threshold_performed (O (bvor Transaction_over_threshold_approved (Y Transaction_over_threshold_performed)))))\n'
+2020-03-25 20:32:03,521: INFO - Synthesized Formula =>(Transaction_over_threshold_performed,O(|(Transaction_over_threshold_approved,Y(Transaction_over_threshold_performed))))
+2020-03-25 20:32:03,521: INFO - Time: 2.19 seconds
+2020-03-25 20:32:03,521: INFO - Total Running Time Time: 2.19 seconds
+2020-03-25 20:32:04,535: INFO - Synthesized Signatures:
+2020-03-25 20:32:04,535: INFO - (1) =>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved))
+2020-03-25 20:32:04,535: INFO - (2) H(=>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved)))
+2020-03-25 20:32:04,535: INFO - (3) =>(O(Transaction_over_threshold_performed),O(Transaction_over_threshold_approved))
+2020-03-25 20:32:04,535: INFO - (4) =>(Transaction_over_threshold_performed,H(=>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved))))
+2020-03-25 20:32:04,535: INFO - (5) =>(Transaction_over_threshold_performed,O(|(Transaction_over_threshold_approved,Y(Transaction_over_threshold_performed))))
+2020-03-25 20:32:04,536: INFO - Time: 3.29 seconds
+Dictionary Support Enabled
+
+FINAL WATCH: 3.06 CPU 5.25 WC

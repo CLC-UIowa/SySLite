@@ -1,0 +1,37 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1611.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1611.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 20:37:00,572: INFO - *** AP:['access_org1_records', 'access_org2_records']
+2020-03-25 20:37:00,573: INFO - *** +ve Traces Size:400
+2020-03-25 20:37:00,573: INFO - *** -ve Traces Size:400
+2020-03-25 20:37:00,573: INFO - *** Formula Size:3
+2020-03-25 20:37:00,585: INFO - Running SyGuS(CVC4)...
+2020-03-25 20:37:00,585: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_203700_chinese_wall_policy_1250_800_sygus_unrolled_encoding.sy']
+2020-03-25 20:37:04,882: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (bvand (O access_org1_records) (O access_org2_records))))\n'
+2020-03-25 20:37:04,916: INFO - Synthesized Formula !(&(O(access_org1_records),O(access_org2_records)))
+2020-03-25 20:37:04,916: INFO - Time: 4.34 seconds
+2020-03-25 20:37:05,018: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (bvand (O access_org2_records) (S access_org2_records access_org1_records))))\n'
+2020-03-25 20:37:05,039: INFO - Synthesized Formula !(&(O(access_org2_records),S(access_org2_records,access_org1_records)))
+2020-03-25 20:37:05,039: INFO - Time: 4.47 seconds
+2020-03-25 20:37:21,638: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (H (bvnot (bvand (O access_org2_records) (S access_org2_records access_org1_records)))))\n'
+2020-03-25 20:37:21,658: INFO - Synthesized Formula H(!(&(O(access_org2_records),S(access_org2_records,access_org1_records))))
+2020-03-25 20:37:21,658: INFO - Time: 21.08 seconds
+2020-03-25 20:37:29,361: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (bvand (O access_org1_records) (O (Y access_org2_records)))))\n'
+2020-03-25 20:37:29,380: INFO - Synthesized Formula !(&(O(access_org1_records),O(Y(access_org2_records))))
+2020-03-25 20:37:29,381: INFO - Time: 28.81 seconds
+2020-03-25 20:37:29,435: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (bvand (O access_org1_records) (S access_org1_records (Y access_org2_records)))))\n'
+2020-03-25 20:37:29,454: INFO - Synthesized Formula !(&(O(access_org1_records),S(access_org1_records,Y(access_org2_records))))
+2020-03-25 20:37:29,454: INFO - Time: 28.88 seconds
+2020-03-25 20:37:29,455: INFO - Total Running Time Time: 28.88 seconds
+2020-03-25 20:37:36,270: INFO - Synthesized Signatures:
+2020-03-25 20:37:36,271: INFO - (1) !(&(O(access_org1_records),O(access_org2_records)))
+2020-03-25 20:37:36,271: INFO - (2) !(&(O(access_org2_records),S(access_org2_records,access_org1_records)))
+2020-03-25 20:37:36,271: INFO - (3) H(!(&(O(access_org2_records),S(access_org2_records,access_org1_records))))
+2020-03-25 20:37:36,271: INFO - (4) !(&(O(access_org1_records),O(Y(access_org2_records))))
+2020-03-25 20:37:36,271: INFO - (5) !(&(O(access_org1_records),S(access_org1_records,Y(access_org2_records))))
+2020-03-25 20:37:36,272: INFO - Time: 35.81 seconds
+Dictionary Support Enabled
+WARNING: TreeLimitedRun lost 21.67s, total lost is 21.67s
+
+FINAL WATCH: 30.32 CPU 37.19 WC

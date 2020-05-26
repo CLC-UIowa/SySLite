@@ -1,6 +1,9 @@
 '''
+Copyright (c) 2020, Board of Trustees of the University of Iowa.
+All rights reserved.
 
-@author: marif
+Use of this source code is governed by a BSD 3-Clause License that
+can be found in the LICENSE file.
 '''
 
 from edu.uiowa.alogritms.SATMethod import run_sat_algo, run_enum_sat_algo, run_guided_sat_algo, run_guided_sat_enum_algo

@@ -1,7 +1,7 @@
 # SySLite 
 <sub>Syntax-Guided Past-time LTL Synthesizer & Enumerator</sub>
 
-SySLite is a synthesis program to learn past-time Linear Temporal Logic (LTL) formulas from a finite set of example traces. These example traces should contain a set of positive and negative traces and can come from various applications (i.e, security policy logs, protocols, and execution of the system or design, etc.). Such traces usually describe the intended and unintended behavior in terms of a sequence of propositions range over time. SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS) to learn PLTL formulas.
+SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS) to learn PLTL formulas from a finite set of example traces. These example traces describe the intended and unintended behavior in terms of positive and negative traces. These example traces can come from various application domains (i.e, security policy logs, protocols, and execution of the system or design, etc.). 
 
 ## Build & Test
 
@@ -64,6 +64,7 @@ All the proposed encoding files exist under the repository: [SySLite/eas-example
 3. [eas-fnf-enc.smt2](https://github.com/CLC-UIowa/SySLite/blob/master/eas-example/eas-fnf-enc.smt2) (\* ADT using Finite Model Finding \*) 
 
 These encodings can be tested using off-the-shelf [CVC4SY](https://github.com/CLC-UIowa/SySLite/blob/master/resources/cvc4) solver using the commands:
+
 `./cvc4 --lang=sygus2 --sygus-stream --sygus-sym-break-pbe FILENAME.sy`
 `./cvc4 FILENAME.smt2`
 
@@ -91,7 +92,7 @@ S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
 
 ## Experiments:
 
-[TODO]
+The details about experiments is described in under mentioned paper. The training and test data include results are contained in [Experiments](https://github.com/CLC-UIowa/SySLite/experiments/)
 
 ### Reference:
 

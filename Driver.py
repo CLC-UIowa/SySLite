@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 '''
-SySLite -- A past-time LTL synthesis program that support a number of
-decision procedures (i.e. SAT/SMT/SyGuS based) to learn formulas from a
-given set of finite traces.
+@Program: SySLite is past-time LTL synthesis program that use various
+decision procedures (i.e. SAT/SMT/SyGuS-based) to learn formulas from a
+given set finite traces.
 
-@author:     mfarif
+@Copyright (c) 2020, Board of Trustees of the University of Iowa. All rights reserved.
 
-@copyright:  2020 The University of Iowa. All rights reserved.
+@License: Use of this source code is governed by a BSD 3-Clause License that can be found in the LICENSE file.
 
-@license:    license
-
-@contact:    muhammad-arif@uiowa.edu
+@Contact: fareed.arif@yahoo.com
 '''
       
 from edu.uiowa.synz.pLTLSynthesizer import synthesize_pLTL

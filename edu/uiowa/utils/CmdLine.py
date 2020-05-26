@@ -1,5 +1,9 @@
 '''
-@author: marif
+Copyright (c) 2020, Board of Trustees of the University of Iowa.
+All rights reserved.
+
+Use of this source code is governed by a BSD 3-Clause License that
+can be found in the LICENSE file.
 '''
 import os
 import argparse
@@ -22,7 +26,7 @@ def supported_arguments(parser):
     required.add_argument('-s', '--size', type=int, default=3)
     required.add_argument('-n', '--number', type=int, default=1)
     required.add_argument('-a', '--algo_type', default='sat', nargs='?', choices=['sat', 'sat_enum', 'dt', 'scikit_dt', 'guided_sat','guided_sat_enum', 'fin_adt', 'adt_sygus', 'bv_sygus'])
-    required.add_argument('-solver', '--solver_type', default='z3', nargs='?', choices=['z3', 'msat', 'cvc4', 'yices', 'btor'])
+    required.add_argument('-solver', '--solver_type', default='z3', nargs='?', choices=['z3', 'msat', 'cvc4', 'yices', 'boolector'])
     required.add_argument('-t', '--tracesFile', metavar='in-file', type=argparse.FileType('rt'), required=False)
 
 

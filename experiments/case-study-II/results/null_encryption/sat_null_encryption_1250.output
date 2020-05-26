@@ -1,0 +1,5 @@
+(1) !(MME_null_encryption_chosen)
+(2) =>(MME_null_encryption_chosen,Y(MME_null_encryption_chosen))
+(3) !(Y(MME_null_encryption_chosen))
+(4) =>(Y(MME_null_encryption_chosen),MME_null_encryption_chosen)
+(5) =>(MME_null_encryption_chosen,authentication_response)

@@ -1,0 +1,5 @@
+(1) =>(authentication_reject,Y(authentication_response))
+(2) H(=>(authentication_reject,Y(authentication_response)))
+(3) =>(O(authentication_reject),Y(authentication_response))
+(4) =>(O(authentication_reject),Y(|(authentication_response,authentication_reject)))
+(5) =>(O(authentication_reject),Y(S(authentication_reject,authentication_response)))

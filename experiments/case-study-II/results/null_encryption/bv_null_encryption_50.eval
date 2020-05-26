@@ -1,0 +1,59 @@
+Formula File: ../lte_traces/traces_dataset/results/null_encryption/bv_null_encryption_50.output
+Testing File: ../lte_traces/traces_dataset/null_encryption/testing/null_encryption_50_10.trace
+(1) !(MME_null_encryption_chosen)
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+!(MME_null_encryption_chosen) ('100.0%', '100.0%', '100.0%')
+(2) H(!(MME_null_encryption_chosen))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+H(!(MME_null_encryption_chosen)) ('100.0%', '100.0%', '100.0%')
+(3) !(Y(MME_null_encryption_chosen))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+!(Y(MME_null_encryption_chosen)) ('100.0%', '100.0%', '100.0%')
+(4) !(|(UE_null_encryption_supported,MME_null_encryption_chosen))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+!(|(UE_null_encryption_supported,MME_null_encryption_chosen)) ('100.0%', '100.0%', '100.0%')
+(5) !(S(security_mode_complete,MME_null_encryption_chosen))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+!(S(security_mode_complete,MME_null_encryption_chosen)) ('100.0%', '100.0%', '100.0%')
+              precision    recall  f1-score   support
+
+   Malicious       1.00      1.00      1.00         5
+      Benign       1.00      1.00      1.00         5
+
+    accuracy                           1.00        10
+   macro avg       1.00      1.00      1.00        10
+weighted avg       1.00      1.00      1.00        10
+
+--------------------------------
+Precision (Malicious Traces): 100.0%
+Precision (Benign Traces): 100.0%
+Recall (Malicious Traces):  100.0%
+Recall (Benign Traces):  100.0%
+F1 (Malicious Traces):  100.0%
+F1 (Benign Traces):  100.0%
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+!(MME_null_encryption_chosen) ('100.0%', '100.0%', '100.0%')

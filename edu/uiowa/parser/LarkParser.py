@@ -1,6 +1,11 @@
 '''
-@author: marif
+Copyright (c) 2020, Board of Trustees of the University of Iowa.
+All rights reserved.
+
+Use of this source code is governed by a BSD 3-Clause License that
+can be found in the LICENSE file.
 '''
+
 from lark import Lark, Transformer, ParseError
 from edu.uiowa.parser.Formula import PLTLFormula
 import logging

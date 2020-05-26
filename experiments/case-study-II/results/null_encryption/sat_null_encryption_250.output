@@ -1,0 +1,5 @@
+(1) !(MME_null_encryption_chosen)
+(2) =>(MME_null_encryption_chosen,FALSE)
+(3) =>(MME_null_encryption_chosen,identity_request)
+(4) =>(MME_null_encryption_chosen,detach_request)
+(5) S(!(MME_null_encryption_chosen),!(MME_null_encryption_chosen))

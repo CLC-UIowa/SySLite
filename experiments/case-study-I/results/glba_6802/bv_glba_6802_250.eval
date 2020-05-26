@@ -1,0 +1,60 @@
+Formula File: ../random-traces/results/glba_6802/bv_glba_6802_250.output
+Validation File: ../random-traces/glba_6802/Traces/glba_6802_250/validation/glba_6802_250_50.trace
+Testing File: ../random-traces/glba_6802/Traces/glba_6802_250/testing/glba_6802_250_50.trace
+(1) =>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure)) ('100.0%', '100.0%', '100.0%')
+(2) H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure)))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))) ('100.0%', '100.0%', '100.0%')
+(3) =>(institution_dislcloses_to_affiliate_customers_npi,H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+=>(institution_dislcloses_to_affiliate_customers_npi,H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure)))) ('100.0%', '100.0%', '100.0%')
+(4) =>(institution_dislcloses_to_affiliate_customers_npi,S(H(customer_opt_out),S(!(customer_opt_out),notice_of_disclosure)))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+=>(institution_dislcloses_to_affiliate_customers_npi,S(H(customer_opt_out),S(!(customer_opt_out),notice_of_disclosure))) ('100.0%', '100.0%', '100.0%')
+(5) =>(institution_dislcloses_to_affiliate_customers_npi,&(=>(customer_opt_out,notice_of_disclosure),S(=>(customer_opt_out,institution_dislcloses_to_affiliate_customers_npi),notice_of_disclosure)))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+=>(institution_dislcloses_to_affiliate_customers_npi,&(=>(customer_opt_out,notice_of_disclosure),S(=>(customer_opt_out,institution_dislcloses_to_affiliate_customers_npi),notice_of_disclosure))) ('100.0%', '100.0%', '100.0%')
+              precision    recall  f1-score   support
+
+   Malicious       1.00      1.00      1.00        25
+      Benign       1.00      1.00      1.00        25
+
+    accuracy                           1.00        50
+   macro avg       1.00      1.00      1.00        50
+weighted avg       1.00      1.00      1.00        50
+
+--------------------------------
+Precision (Malicious Traces): 100.0%
+Precision (Benign Traces): 100.0%
+Recall (Malicious Traces):  100.0%
+Recall (Benign Traces):  100.0%
+F1 (Malicious Traces):  100.0%
+F1 (Benign Traces):  100.0%
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure)) ('100.0%', '100.0%', '100.0%')

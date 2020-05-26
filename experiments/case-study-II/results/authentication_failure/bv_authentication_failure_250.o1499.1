@@ -1,0 +1,36 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1499.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1499.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 17:03:45,758: INFO - *** AP:['identity_response', 'tracking_area_update_request', 'security_mode_complete', 'service_request', 'emm_information', 'tracking_area_update_complete', 'authentication_failure', 'identity_request', 'detach_request', 'attach_accept', 'authentication_request', 'attach_complete', 'detach_accept', 'authentication_response', 'attach_request', 'tracking_area_update_accept', 'security_mode_command']
+2020-03-25 17:03:45,758: INFO - *** +ve Traces Size:80
+2020-03-25 17:03:45,758: INFO - *** -ve Traces Size:80
+2020-03-25 17:03:45,758: INFO - *** Formula Size:3
+2020-03-25 17:03:45,800: INFO - Running SyGuS(CVC4)...
+2020-03-25 17:03:45,801: INFO - Command: ['/mnt/nfs/home/marif/fmcad-expriments/run_scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_170345_authentication_failure_250_160_sygus_unrolled_encoding.sy']
+2020-03-25 17:03:45,862: INFO - Synthesized Formula Definition b'(define-fun phi ((identity_response (_ BitVec 75)) (tracking_area_update_request (_ BitVec 75)) (security_mode_complete (_ BitVec 75)) (service_request (_ BitVec 75)) (emm_information (_ BitVec 75)) (tracking_area_update_complete (_ BitVec 75)) (authentication_failure (_ BitVec 75)) (identity_request (_ BitVec 75)) (detach_request (_ BitVec 75)) (attach_accept (_ BitVec 75)) (authentication_request (_ BitVec 75)) (attach_complete (_ BitVec 75)) (detach_accept (_ BitVec 75)) (authentication_response (_ BitVec 75)) (attach_request (_ BitVec 75)) (tracking_area_update_accept (_ BitVec 75)) (security_mode_command (_ BitVec 75))) (_ BitVec 75) (bvnot authentication_failure))\n'
+2020-03-25 17:03:45,897: INFO - Synthesized Formula !(authentication_failure)
+2020-03-25 17:03:45,897: INFO - Time: 0.14 seconds
+2020-03-25 17:03:45,956: INFO - Synthesized Formula Definition b'(define-fun phi ((identity_response (_ BitVec 75)) (tracking_area_update_request (_ BitVec 75)) (security_mode_complete (_ BitVec 75)) (service_request (_ BitVec 75)) (emm_information (_ BitVec 75)) (tracking_area_update_complete (_ BitVec 75)) (authentication_failure (_ BitVec 75)) (identity_request (_ BitVec 75)) (detach_request (_ BitVec 75)) (attach_accept (_ BitVec 75)) (authentication_request (_ BitVec 75)) (attach_complete (_ BitVec 75)) (detach_accept (_ BitVec 75)) (authentication_response (_ BitVec 75)) (attach_request (_ BitVec 75)) (tracking_area_update_accept (_ BitVec 75)) (security_mode_command (_ BitVec 75))) (_ BitVec 75) (H (bvnot authentication_failure)))\n'
+2020-03-25 17:03:45,977: INFO - Synthesized Formula H(!(authentication_failure))
+2020-03-25 17:03:45,977: INFO - Time: 0.22 seconds
+2020-03-25 17:03:45,977: INFO - Synthesized Formula Definition b'(define-fun phi ((identity_response (_ BitVec 75)) (tracking_area_update_request (_ BitVec 75)) (security_mode_complete (_ BitVec 75)) (service_request (_ BitVec 75)) (emm_information (_ BitVec 75)) (tracking_area_update_complete (_ BitVec 75)) (authentication_failure (_ BitVec 75)) (identity_request (_ BitVec 75)) (detach_request (_ BitVec 75)) (attach_accept (_ BitVec 75)) (authentication_request (_ BitVec 75)) (attach_complete (_ BitVec 75)) (detach_accept (_ BitVec 75)) (authentication_response (_ BitVec 75)) (attach_request (_ BitVec 75)) (tracking_area_update_accept (_ BitVec 75)) (security_mode_command (_ BitVec 75))) (_ BitVec 75) (bvnot (Y authentication_failure)))\n'
+2020-03-25 17:03:45,997: INFO - Synthesized Formula !(Y(authentication_failure))
+2020-03-25 17:03:45,998: INFO - Time: 0.24 seconds
+2020-03-25 17:03:46,024: INFO - Synthesized Formula Definition b'(define-fun phi ((identity_response (_ BitVec 75)) (tracking_area_update_request (_ BitVec 75)) (security_mode_complete (_ BitVec 75)) (service_request (_ BitVec 75)) (emm_information (_ BitVec 75)) (tracking_area_update_complete (_ BitVec 75)) (authentication_failure (_ BitVec 75)) (identity_request (_ BitVec 75)) (detach_request (_ BitVec 75)) (attach_accept (_ BitVec 75)) (authentication_request (_ BitVec 75)) (attach_complete (_ BitVec 75)) (detach_accept (_ BitVec 75)) (authentication_response (_ BitVec 75)) (attach_request (_ BitVec 75)) (tracking_area_update_accept (_ BitVec 75)) (security_mode_command (_ BitVec 75))) (_ BitVec 75) (bvnot (S authentication_request authentication_failure)))\n'
+2020-03-25 17:03:46,044: INFO - Synthesized Formula !(S(authentication_request,authentication_failure))
+2020-03-25 17:03:46,044: INFO - Time: 0.29 seconds
+2020-03-25 17:03:46,564: INFO - Synthesized Formula Definition b'(define-fun phi ((identity_response (_ BitVec 75)) (tracking_area_update_request (_ BitVec 75)) (security_mode_complete (_ BitVec 75)) (service_request (_ BitVec 75)) (emm_information (_ BitVec 75)) (tracking_area_update_complete (_ BitVec 75)) (authentication_failure (_ BitVec 75)) (identity_request (_ BitVec 75)) (detach_request (_ BitVec 75)) (attach_accept (_ BitVec 75)) (authentication_request (_ BitVec 75)) (attach_complete (_ BitVec 75)) (detach_accept (_ BitVec 75)) (authentication_response (_ BitVec 75)) (attach_request (_ BitVec 75)) (tracking_area_update_accept (_ BitVec 75)) (security_mode_command (_ BitVec 75))) (_ BitVec 75) (bvimpl authentication_failure (O tracking_area_update_request)))\n'
+2020-03-25 17:03:46,585: INFO - Synthesized Formula =>(authentication_failure,O(tracking_area_update_request))
+2020-03-25 17:03:46,585: INFO - Time: 0.83 seconds
+2020-03-25 17:03:46,585: INFO - Total Running Time Time: 0.83 seconds
+2020-03-25 17:03:47,912: INFO - Synthesized Signatures:
+2020-03-25 17:03:47,912: INFO - (1) !(authentication_failure)
+2020-03-25 17:03:47,912: INFO - (2) H(!(authentication_failure))
+2020-03-25 17:03:47,912: INFO - (3) !(Y(authentication_failure))
+2020-03-25 17:03:47,913: INFO - (4) !(S(authentication_request,authentication_failure))
+2020-03-25 17:03:47,913: INFO - (5) =>(authentication_failure,O(tracking_area_update_request))
+2020-03-25 17:03:47,914: INFO - Time: 2.38 seconds
+Dictionary Support Enabled
+
+FINAL WATCH: 3.28 CPU 3.82 WC

@@ -1,3 +1,11 @@
+'''
+Copyright (c) 2020, Board of Trustees of the University of Iowa.
+All rights reserved.
+
+Use of this source code is governed by a BSD 3-Clause License that
+can be found in the LICENSE file.
+'''
+
 from pysmt.shortcuts import And, Not, Solver, get_unsat_core
 from pysmt.logics import QF_BOOL 
 from pysmt.rewritings import conjunctive_partition  

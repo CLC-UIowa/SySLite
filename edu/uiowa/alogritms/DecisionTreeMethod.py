@@ -1,3 +1,11 @@
+'''
+Copyright (c) 2020, Board of Trustees of the University of Iowa.
+All rights reserved.
+
+Use of this source code is governed by a BSD 3-Clause License that
+can be found in the LICENSE file.
+'''
+
 from edu.uiowa.strategies.DTClassifer import stratgey_beta, stratgey_gamma, training_dataset, prepare_dataset
 from edu.uiowa.encoder.CART import DecisionTree, or_fml, path2fml
 from edu.uiowa.encoder.ScikitCART import scikit_cart

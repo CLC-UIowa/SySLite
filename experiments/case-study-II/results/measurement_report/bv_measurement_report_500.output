@@ -1,0 +1,2 @@
+(1) =>(measurementReport,S(!(rrcConnectionSetup),securityModeComplete))
+(2) =>(rrcConnectionReconfigurationComplete,S(!(rrcConnectionSetup),securityModeComplete))

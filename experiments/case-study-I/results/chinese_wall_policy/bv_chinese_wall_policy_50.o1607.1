@@ -1,0 +1,36 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1607.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1607.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 20:36:01,171: INFO - *** AP:['access_org1_records', 'access_org2_records']
+2020-03-25 20:36:01,172: INFO - *** +ve Traces Size:16
+2020-03-25 20:36:01,172: INFO - *** -ve Traces Size:16
+2020-03-25 20:36:01,172: INFO - *** Formula Size:3
+2020-03-25 20:36:01,177: INFO - Running SyGuS(CVC4)...
+2020-03-25 20:36:01,177: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_203601_chinese_wall_policy_50_32_sygus_unrolled_encoding.sy']
+2020-03-25 20:36:01,504: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (bvand access_org1_records (O access_org2_records))))\n'
+2020-03-25 20:36:01,574: INFO - Synthesized Formula !(&(access_org1_records,O(access_org2_records)))
+2020-03-25 20:36:01,575: INFO - Time: 0.40 seconds
+2020-03-25 20:36:01,575: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (bvand access_org1_records (S access_org1_records access_org2_records))))\n'
+2020-03-25 20:36:01,597: INFO - Synthesized Formula !(&(access_org1_records,S(access_org1_records,access_org2_records)))
+2020-03-25 20:36:01,597: INFO - Time: 0.42 seconds
+2020-03-25 20:36:01,721: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvimpl (S (O access_org1_records) access_org2_records) access_org2_records))\n'
+2020-03-25 20:36:01,741: INFO - Synthesized Formula =>(S(O(access_org1_records),access_org2_records),access_org2_records)
+2020-03-25 20:36:01,741: INFO - Time: 0.57 seconds
+2020-03-25 20:36:01,741: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvimpl (S (O access_org2_records) access_org1_records) access_org1_records))\n'
+2020-03-25 20:36:01,760: INFO - Synthesized Formula =>(S(O(access_org2_records),access_org1_records),access_org1_records)
+2020-03-25 20:36:01,760: INFO - Time: 0.59 seconds
+2020-03-25 20:36:01,762: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (H (bvnot (bvand access_org1_records (O access_org2_records)))))\n'
+2020-03-25 20:36:01,781: INFO - Synthesized Formula H(!(&(access_org1_records,O(access_org2_records))))
+2020-03-25 20:36:01,781: INFO - Time: 0.61 seconds
+2020-03-25 20:36:01,781: INFO - Total Running Time Time: 0.61 seconds
+2020-03-25 20:36:02,024: INFO - Synthesized Signatures:
+2020-03-25 20:36:02,024: INFO - (1) !(&(access_org1_records,O(access_org2_records)))
+2020-03-25 20:36:02,025: INFO - (2) !(&(access_org1_records,S(access_org1_records,access_org2_records)))
+2020-03-25 20:36:02,025: INFO - (3) =>(S(O(access_org1_records),access_org2_records),access_org2_records)
+2020-03-25 20:36:02,025: INFO - (4) =>(S(O(access_org2_records),access_org1_records),access_org1_records)
+2020-03-25 20:36:02,025: INFO - (5) H(!(&(access_org1_records,O(access_org2_records))))
+2020-03-25 20:36:02,026: INFO - Time: 0.89 seconds
+Dictionary Support Enabled
+
+FINAL WATCH: 2.22 CPU 2.79 WC

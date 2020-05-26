@@ -1,0 +1,36 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1609.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1609.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 20:36:30,300: INFO - *** AP:['access_org1_records', 'access_org2_records']
+2020-03-25 20:36:30,300: INFO - *** +ve Traces Size:80
+2020-03-25 20:36:30,300: INFO - *** -ve Traces Size:80
+2020-03-25 20:36:30,300: INFO - *** Formula Size:3
+2020-03-25 20:36:30,318: INFO - Running SyGuS(CVC4)...
+2020-03-25 20:36:30,318: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_203630_chinese_wall_policy_250_160_sygus_unrolled_encoding.sy']
+2020-03-25 20:36:30,537: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (bvand access_org1_records (O access_org2_records))))\n'
+2020-03-25 20:36:30,571: INFO - Synthesized Formula !(&(access_org1_records,O(access_org2_records)))
+2020-03-25 20:36:30,571: INFO - Time: 0.27 seconds
+2020-03-25 20:36:30,571: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (bvand access_org2_records (O access_org1_records))))\n'
+2020-03-25 20:36:30,591: INFO - Synthesized Formula !(&(access_org2_records,O(access_org1_records)))
+2020-03-25 20:36:30,591: INFO - Time: 0.29 seconds
+2020-03-25 20:36:31,063: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvimpl (S (O access_org2_records) access_org1_records) access_org1_records))\n'
+2020-03-25 20:36:31,082: INFO - Synthesized Formula =>(S(O(access_org2_records),access_org1_records),access_org1_records)
+2020-03-25 20:36:31,082: INFO - Time: 0.78 seconds
+2020-03-25 20:36:31,113: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (H (bvnot (bvand access_org1_records (O access_org2_records)))))\n'
+2020-03-25 20:36:31,132: INFO - Synthesized Formula H(!(&(access_org1_records,O(access_org2_records))))
+2020-03-25 20:36:31,132: INFO - Time: 0.83 seconds
+2020-03-25 20:36:31,132: INFO - Synthesized Formula Definition b'(define-fun phi ((access_org1_records (_ BitVec 10)) (access_org2_records (_ BitVec 10))) (_ BitVec 10) (bvnot (Y (bvand access_org1_records (O access_org2_records)))))\n'
+2020-03-25 20:36:31,152: INFO - Synthesized Formula !(Y(&(access_org1_records,O(access_org2_records))))
+2020-03-25 20:36:31,152: INFO - Time: 0.85 seconds
+2020-03-25 20:36:31,152: INFO - Total Running Time Time: 0.85 seconds
+2020-03-25 20:36:32,067: INFO - Synthesized Signatures:
+2020-03-25 20:36:32,067: INFO - (1) !(&(access_org1_records,O(access_org2_records)))
+2020-03-25 20:36:32,067: INFO - (2) !(&(access_org2_records,O(access_org1_records)))
+2020-03-25 20:36:32,067: INFO - (3) =>(S(O(access_org2_records),access_org1_records),access_org1_records)
+2020-03-25 20:36:32,067: INFO - (4) H(!(&(access_org1_records,O(access_org2_records))))
+2020-03-25 20:36:32,067: INFO - (5) !(Y(&(access_org1_records,O(access_org2_records))))
+2020-03-25 20:36:32,068: INFO - Time: 1.82 seconds
+Dictionary Support Enabled
+
+FINAL WATCH: 2.55 CPU 2.99 WC

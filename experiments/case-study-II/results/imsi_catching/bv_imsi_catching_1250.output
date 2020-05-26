@@ -1,0 +1,5 @@
+(1) !(identity_request_IMSI)
+(2) H(!(identity_request_IMSI))
+(3) !(Y(identity_request_IMSI))
+(4) !(S(detach_request,identity_request_IMSI))
+(5) !(S(attach_accept,identity_request_IMSI))

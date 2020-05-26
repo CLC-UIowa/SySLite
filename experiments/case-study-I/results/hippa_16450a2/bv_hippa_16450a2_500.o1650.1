@@ -1,0 +1,37 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1650.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1650.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 22:14:16,326: INFO - *** AP:['covered_entity_dislcoses_patient_psych_notes', 'authorization_psych_notes_revoked', 'receive_patient_authorization_psych_notes']
+2020-03-25 22:14:16,326: INFO - *** +ve Traces Size:160
+2020-03-25 22:14:16,326: INFO - *** -ve Traces Size:160
+2020-03-25 22:14:16,326: INFO - *** Formula Size:3
+2020-03-25 22:14:16,337: INFO - Running SyGuS(CVC4)...
+2020-03-25 22:14:16,337: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_221416_hippa_16450a2_500_320_sygus_unrolled_encoding.sy']
+2020-03-25 22:14:18,141: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_psych_notes (_ BitVec 10)) (authorization_psych_notes_revoked (_ BitVec 10)) (receive_patient_authorization_psych_notes (_ BitVec 10))) (_ BitVec 10) (bvimpl covered_entity_dislcoses_patient_psych_notes (S (bvnot authorization_psych_notes_revoked) receive_patient_authorization_psych_notes)))\n'
+2020-03-25 22:14:18,176: INFO - Synthesized Formula =>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes))
+2020-03-25 22:14:18,176: INFO - Time: 1.85 seconds
+2020-03-25 22:14:23,857: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_psych_notes (_ BitVec 10)) (authorization_psych_notes_revoked (_ BitVec 10)) (receive_patient_authorization_psych_notes (_ BitVec 10))) (_ BitVec 10) (H (bvimpl covered_entity_dislcoses_patient_psych_notes (S (bvnot authorization_psych_notes_revoked) receive_patient_authorization_psych_notes))))\n'
+2020-03-25 22:14:23,878: INFO - Synthesized Formula H(=>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes)))
+2020-03-25 22:14:23,878: INFO - Time: 7.55 seconds
+2020-03-25 22:17:22,165: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_psych_notes (_ BitVec 10)) (authorization_psych_notes_revoked (_ BitVec 10)) (receive_patient_authorization_psych_notes (_ BitVec 10))) (_ BitVec 10) (bvimpl covered_entity_dislcoses_patient_psych_notes (H (bvimpl covered_entity_dislcoses_patient_psych_notes (S (bvnot authorization_psych_notes_revoked) receive_patient_authorization_psych_notes)))))\n'
+2020-03-25 22:17:22,186: INFO - Synthesized Formula =>(covered_entity_dislcoses_patient_psych_notes,H(=>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes))))
+2020-03-25 22:17:22,186: INFO - Time: 185.86 seconds
+2020-03-25 22:18:35,644: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_psych_notes (_ BitVec 10)) (authorization_psych_notes_revoked (_ BitVec 10)) (receive_patient_authorization_psych_notes (_ BitVec 10))) (_ BitVec 10) (bvimpl covered_entity_dislcoses_patient_psych_notes (bvand (bvimpl authorization_psych_notes_revoked receive_patient_authorization_psych_notes) (S (bvimpl authorization_psych_notes_revoked covered_entity_dislcoses_patient_psych_notes) receive_patient_authorization_psych_notes))))\n'
+2020-03-25 22:18:35,664: INFO - Synthesized Formula =>(covered_entity_dislcoses_patient_psych_notes,&(=>(authorization_psych_notes_revoked,receive_patient_authorization_psych_notes),S(=>(authorization_psych_notes_revoked,covered_entity_dislcoses_patient_psych_notes),receive_patient_authorization_psych_notes)))
+2020-03-25 22:18:35,665: INFO - Time: 259.34 seconds
+2020-03-25 22:18:56,595: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_psych_notes (_ BitVec 10)) (authorization_psych_notes_revoked (_ BitVec 10)) (receive_patient_authorization_psych_notes (_ BitVec 10))) (_ BitVec 10) (bvimpl covered_entity_dislcoses_patient_psych_notes (S (bvimpl authorization_psych_notes_revoked (H (bvand covered_entity_dislcoses_patient_psych_notes authorization_psych_notes_revoked))) receive_patient_authorization_psych_notes)))\n'
+2020-03-25 22:18:56,616: INFO - Synthesized Formula =>(covered_entity_dislcoses_patient_psych_notes,S(=>(authorization_psych_notes_revoked,H(&(covered_entity_dislcoses_patient_psych_notes,authorization_psych_notes_revoked))),receive_patient_authorization_psych_notes))
+2020-03-25 22:18:56,616: INFO - Time: 280.29 seconds
+2020-03-25 22:18:56,616: INFO - Total Running Time Time: 280.29 seconds
+2020-03-25 22:19:00,903: INFO - Synthesized Signatures:
+2020-03-25 22:19:00,903: INFO - (1) =>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes))
+2020-03-25 22:19:00,903: INFO - (2) H(=>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes)))
+2020-03-25 22:19:00,903: INFO - (3) =>(covered_entity_dislcoses_patient_psych_notes,H(=>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes))))
+2020-03-25 22:19:00,903: INFO - (4) =>(covered_entity_dislcoses_patient_psych_notes,&(=>(authorization_psych_notes_revoked,receive_patient_authorization_psych_notes),S(=>(authorization_psych_notes_revoked,covered_entity_dislcoses_patient_psych_notes),receive_patient_authorization_psych_notes)))
+2020-03-25 22:19:00,903: INFO - (5) =>(covered_entity_dislcoses_patient_psych_notes,S(=>(authorization_psych_notes_revoked,H(&(covered_entity_dislcoses_patient_psych_notes,authorization_psych_notes_revoked))),receive_patient_authorization_psych_notes))
+2020-03-25 22:19:00,905: INFO - Time: 284.71 seconds
+Dictionary Support Enabled
+WARNING: TreeLimitedRun lost 273.58s, total lost is 273.58s
+
+FINAL WATCH: 279.98 CPU 286.80 WC
