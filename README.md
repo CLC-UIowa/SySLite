@@ -12,7 +12,7 @@ SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS)
 
 An example trace file contains a set of positive and negative traces to learn an emergency alert system (eas) formula. 
 The trace file use a format that is described below and exists under the repository:
-'SySLite/eas-example/eas.trace'
+[SySLite/eas-example/](https://github.com/CLC-UIowa/SySLite/tree/master/eas-example)
 
 Please use the command to run eas trace example using bit-vector SyGuS encoding:
 
