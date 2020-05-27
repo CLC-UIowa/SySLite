@@ -66,6 +66,7 @@ All the proposed encoding files exist under the repository: [SySLite/eas-example
 These encodings can be tested using off-the-shelf [CVC4SY](https://github.com/CLC-UIowa/SySLite/blob/master/resources/cvc4) solver using the commands:
 
 `./cvc4 --lang=sygus2 --sygus-stream --sygus-sym-break-pbe FILENAME.sy`
+
 `./cvc4 FILENAME.smt2`
 
 ##Input File Format:
@@ -92,7 +93,7 @@ S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
 
 ## Experiments:
 
-The details about experiments is described in under mentioned paper. The training and test data include results are contained in [Experiments](https://github.com/CLC-UIowa/SySLite/experiments/)
+The details about the experiments are described in the undermentioned paper. The training and test data include results are contained in [Experiments](https://github.com/CLC-UIowa/SySLite/experiments/)
 
 ### Reference:
 
