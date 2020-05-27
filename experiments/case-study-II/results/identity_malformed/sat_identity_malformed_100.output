@@ -1,5 +1,0 @@
-(1) !(identity_request_not_well_formed)
-(2) =>(identity_request_not_well_formed,identity_request_IMEI)
-(3) =>(identity_request_not_well_formed,FALSE)
-(4) =>(identity_request_not_well_formed,identity_request_IMSI)
-(5) =>(identity_request_not_well_formed,attach_request)

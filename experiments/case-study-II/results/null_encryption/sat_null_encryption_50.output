@@ -1,5 +1,0 @@
-(1) !(MME_null_encryption_chosen)
-(2) =>(MME_null_encryption_chosen,identity_request)
-(3) =>(MME_null_encryption_chosen,tracking_area_update_request)
-(4) =>(MME_null_encryption_chosen,identity_response)
-(5) =>(O(MME_null_encryption_chosen),MME_null_encryption_chosen)

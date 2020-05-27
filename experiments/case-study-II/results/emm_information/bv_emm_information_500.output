@@ -1,5 +1,0 @@
-(1) !(emm_information_not_authenticated_and_ciphered)
-(2) H(!(emm_information_not_authenticated_and_ciphered))
-(3) !(Y(emm_information_not_authenticated_and_ciphered))
-(4) !(S(extended_service_request,emm_information_not_authenticated_and_ciphered))
-(5) !(S(detach_request,emm_information_not_authenticated_and_ciphered))

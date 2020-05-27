@@ -1,2 +1,0 @@
-(1) =>(rrcConnectionReconfiguration,S(!(rrcConnectionRequest),securityModeComplete))
-(2) H(=>(rrcConnectionReconfiguration,S(!(rrcConnectionRequest),securityModeComplete)))

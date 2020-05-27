@@ -1,5 +1,0 @@
-(1) !(MME_null_encryption_chosen)
-(2) =>(MME_null_encryption_chosen,attach_request)
-(3) =>(MME_null_encryption_chosen,identity_request)
-(4) =>(MME_null_encryption_chosen,attach_complete)
-(5) =>(MME_null_encryption_chosen,service_request)
