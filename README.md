@@ -5,8 +5,13 @@ SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS)
 
 ## Build & Test
 
-1. To build, `run ./tool-setup` 
-2. To run, `./Driver --help`
+1. To build 
+
+`run ./tool-setup` 
+
+2. To run 
+
+`./Driver --help`
 
 ## Usage
 
@@ -93,7 +98,7 @@ S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
 
 ## Experiments:
 
-The details about the experiments are described in the undermentioned paper. The training and test data include results are contained in [Experiments](https://github.com/CLC-UIowa/SySLite/experiments/)
+The details about the experiments are described in the undermentioned paper. The training and test data include results are contained in [Experiments](https://github.com/CLC-UIowa/SySLite/tree/master/experiments)
 
 ### Reference:
 
