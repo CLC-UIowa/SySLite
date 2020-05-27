@@ -5,13 +5,9 @@ SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS)
 
 ## Build & Test
 
-1. To build 
+1. To build: `run ./tool-setup` 
 
-`run ./tool-setup` 
-
-2. To run 
-
-`./Driver --help`
+2. To run: `./Driver --help`
 
 ## Usage
 
