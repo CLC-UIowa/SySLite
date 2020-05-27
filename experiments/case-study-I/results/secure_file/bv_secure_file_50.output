@@ -1,5 +1,0 @@
-(1) =>(secure_file_open,Y(S(!(secure_file_open),=>(Y(TRUE),secure_file_closed))))
-(2) =>(secure_file_open,Y(S(!(secure_file_open),=>(O(secure_file_open),secure_file_closed))))
-(3) H(=>(secure_file_open,Y(S(!(secure_file_open),=>(Y(TRUE),secure_file_closed)))))
-(4) =>(secure_file_open,Y(!(S(=>(secure_file_closed,secure_file_open),!(=>(secure_file_open,secure_file_closed))))))
-(5) =>(secure_file_open,Y(=>(secure_file_open,&(secure_file_closed,H(=>(S(secure_file_open,secure_file_closed),secure_file_closed))))))
