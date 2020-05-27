@@ -1,0 +1,1 @@
+(1) =>(rrcConnectionReconfiguration,S(!(rrcConnectionSetupComplete),securityModeComplete))

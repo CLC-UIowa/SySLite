@@ -1,0 +1,5 @@
+(1) !(identity_request_IMSI)
+(2) =>(identity_request_IMSI,identity_request_GUTI)
+(3) =>(identity_request_IMSI,detach_request)
+(4) =>(identity_request_IMSI,attach_request)
+(5) !(S(identity_request_IMSI,identity_request_IMSI))

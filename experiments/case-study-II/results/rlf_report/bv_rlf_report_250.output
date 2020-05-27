@@ -1,0 +1,4 @@
+(1) =>(rrcConnectionReconfigurationComplete,S(!(rrcConnectionRelease),securityModeCommand))
+(2) =>(ueInformationResponse-r9,S(!(rrcConnectionRelease),securityModeCommand))
+(3) H(=>(rrcConnectionReconfigurationComplete,S(!(rrcConnectionRelease),securityModeCommand)))
+(4) H(=>(ueInformationResponse-r9,S(!(rrcConnectionRelease),securityModeCommand)))

@@ -1,0 +1,5 @@
+(1) !(emm_information_not_authenticated_and_ciphered)
+(2) =>(emm_information_not_authenticated_and_ciphered,security_mode_complete)
+(3) =>(emm_information_not_authenticated_and_ciphered,emm_information_authenticated_and_ciphered)
+(4) =>(emm_information_not_authenticated_and_ciphered,attach_request)
+(5) =>(emm_information_not_authenticated_and_ciphered,attach_complete)

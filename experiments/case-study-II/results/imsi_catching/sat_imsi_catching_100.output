@@ -1,0 +1,5 @@
+(1) !(identity_request_IMSI)
+(2) =>(identity_request_IMSI,Y(identity_request_IMSI))
+(3) =>(identity_request_IMSI,H(identity_request_IMSI))
+(4) =>(identity_request_IMSI,!(identity_request_IMSI))
+(5) !(|(identity_request_IMSI,identity_request_IMSI))

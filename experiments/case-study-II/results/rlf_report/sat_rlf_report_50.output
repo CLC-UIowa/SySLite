@@ -1,0 +1,5 @@
+(1) =>(ueInformationResponse-r9,S(!(ueCapabilityEnquiry),securityModeCommand))
+(2) =>(ueInformationResponse-r9,S(!(ueCapabilityInformation),securityModeCommand))
+(3) =>(ueInformationResponse-r9,S(!(ueCapabilityInformation),securityModeComplete))
+(4) =>(ueInformationResponse-r9,S(=>(ueCapabilityInformation,securityModeComplete),securityModeComplete))
+(5) =>(ueInformationResponse-r9,S(=>(rrcConnectionRelease,ueInformationResponse-r9),securityModeComplete))

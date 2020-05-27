@@ -1,0 +1,31 @@
+Formula File: ../lte_traces/traces_dataset/results/rlf_report/bv_rlf_report_1250.output
+Testing File: ../lte_traces/traces_dataset/rlf_report/testing/rlf_report_1250_250.trace
+(1) =>(ueInformationResponse-r9,S(!(rrcConnectionRequest),securityModeCommand))
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+=>(ueInformationResponse-r9,S(!(rrcConnectionRequest),securityModeCommand)) ('100.0%', '100.0%', '100.0%')
+              precision    recall  f1-score   support
+
+   Malicious       1.00      1.00      1.00       125
+      Benign       1.00      1.00      1.00       125
+
+    accuracy                           1.00       250
+   macro avg       1.00      1.00      1.00       250
+weighted avg       1.00      1.00      1.00       250
+
+--------------------------------
+Precision (Malicious Traces): 100.0%
+Precision (Benign Traces): 100.0%
+Recall (Malicious Traces):  100.0%
+Recall (Benign Traces):  100.0%
+F1 (Malicious Traces):  100.0%
+F1 (Benign Traces):  100.0%
+--------------------------------
+Weighted Precision:100.0%
+Weighted Recall:100.0%
+Weighted F1: 100.0%
+--------------------------
+=>(ueInformationResponse-r9,S(!(rrcConnectionRequest),securityModeCommand)) ('100.0%', '100.0%', '100.0%')

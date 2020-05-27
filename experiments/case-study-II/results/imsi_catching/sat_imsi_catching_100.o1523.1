@@ -1,0 +1,53 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1523.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1523.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 17:43:00,635: INFO - *** AP:['tracking_area_update_request', 'service_request', 'identity_request_IMSI', 'attach_complete', 'emm_information', 'security_mode_complete', 'identity_request_IMEI', 'detach_request', 'attach_request', 'security_mode_command', 'detach_accept', 'tracking_area_update_complete', 'tracking_area_update_accept', 'identity_response', 'attach_accept', 'authentication_response', 'extended_service_request', 'identity_request_GUTI', 'authentication_request', 'identity_request']
+2020-03-25 17:43:00,635: INFO - *** +ve Traces Size:32
+2020-03-25 17:43:00,635: INFO - *** -ve Traces Size:32
+2020-03-25 17:43:00,635: INFO - *** Formula Size:3
+2020-03-25 17:43:00,635: INFO - Generate Encoding for Formula size 1
+2020-03-25 17:43:00,636: INFO - Labels set (AP): {'detach_request', 'identity_request_IMEI', 'tracking_area_update_complete', 'authentication_request', 'emm_information', 'detach_accept', 'identity_request', 'security_mode_complete', 'identity_response', 'identity_request_IMSI', 'attach_request', 'attach_accept', 'authentication_response', 'identity_request_GUTI', 'tracking_area_update_request', 'extended_service_request', 'security_mode_command', 'attach_complete', 'service_request', 'tracking_area_update_accept'}
+2020-03-25 17:43:00,639: INFO - Encoding Shape Constraints...
+2020-03-25 17:43:00,717: INFO - Encoding Benign Traces Constraints...
+2020-03-25 17:43:01,199: INFO - Encoding Rejected Traces Constraints...
+2020-03-25 17:43:01,730: INFO - Synthesized Signatures: []
+2020-03-25 17:43:01,730: INFO - Generate Encoding for Formula size 2
+2020-03-25 17:43:01,730: INFO - Labels set (AP): {'detach_request', 'identity_request_IMEI', 'tracking_area_update_complete', 'authentication_request', 'emm_information', 'detach_accept', 'identity_request', 'security_mode_complete', 'identity_response', 'identity_request_IMSI', 'attach_request', 'attach_accept', 'authentication_response', 'identity_request_GUTI', 'tracking_area_update_request', 'extended_service_request', 'security_mode_command', 'attach_complete', 'service_request', 'tracking_area_update_accept'}
+2020-03-25 17:43:01,737: INFO - Encoding Shape Constraints...
+2020-03-25 17:43:01,819: INFO - Encoding Benign Traces Constraints...
+2020-03-25 17:43:04,010: INFO - Encoding Rejected Traces Constraints...
+2020-03-25 17:43:06,406: INFO - Synthesized Signatures: []
+2020-03-25 17:43:06,406: INFO - Generate Encoding for Formula size 3
+2020-03-25 17:43:06,406: INFO - Labels set (AP): {'detach_request', 'identity_request_IMEI', 'tracking_area_update_complete', 'authentication_request', 'emm_information', 'detach_accept', 'identity_request', 'security_mode_complete', 'identity_response', 'identity_request_IMSI', 'attach_request', 'attach_accept', 'authentication_response', 'identity_request_GUTI', 'tracking_area_update_request', 'extended_service_request', 'security_mode_command', 'attach_complete', 'service_request', 'tracking_area_update_accept'}
+2020-03-25 17:43:06,416: INFO - Encoding Shape Constraints...
+2020-03-25 17:43:06,522: INFO - Encoding Benign Traces Constraints...
+2020-03-25 17:43:12,264: INFO - Encoding Rejected Traces Constraints...
+2020-03-25 17:43:24,315: INFO - Extracted formula !(identity_request_IMSI)
+2020-03-25 17:43:24,316: INFO - Time: 17.91 seconds
+2020-03-25 17:43:24,324: INFO - Synthesized Signatures: [!(identity_request_IMSI)]
+2020-03-25 17:43:24,377: INFO - Generate Encoding for Formula size 4
+2020-03-25 17:43:24,377: INFO - Labels set (AP): {'detach_request', 'identity_request_IMEI', 'tracking_area_update_complete', 'authentication_request', 'emm_information', 'detach_accept', 'identity_request', 'security_mode_complete', 'identity_response', 'identity_request_IMSI', 'attach_request', 'attach_accept', 'authentication_response', 'identity_request_GUTI', 'tracking_area_update_request', 'extended_service_request', 'security_mode_command', 'attach_complete', 'service_request', 'tracking_area_update_accept'}
+2020-03-25 17:43:24,390: INFO - Encoding Shape Constraints...
+2020-03-25 17:43:24,523: INFO - Encoding Benign Traces Constraints...
+2020-03-25 17:43:36,222: INFO - Encoding Rejected Traces Constraints...
+2020-03-25 17:44:07,428: INFO - Extracted formula !(|(identity_request_IMSI,identity_request_IMSI))
+2020-03-25 17:44:07,428: INFO - Time: 43.05 seconds
+2020-03-25 17:44:09,766: INFO - Extracted formula =>(identity_request_IMSI,!(identity_request_IMSI))
+2020-03-25 17:44:09,766: INFO - Time: 45.39 seconds
+2020-03-25 17:44:12,080: INFO - Extracted formula =>(identity_request_IMSI,H(identity_request_IMSI))
+2020-03-25 17:44:12,080: INFO - Time: 47.70 seconds
+2020-03-25 17:44:14,921: INFO - Extracted formula =>(identity_request_IMSI,Y(identity_request_IMSI))
+2020-03-25 17:44:14,921: INFO - Time: 50.54 seconds
+2020-03-25 17:44:15,042: INFO - Synthesized Signatures: [!(|(identity_request_IMSI,identity_request_IMSI)), =>(identity_request_IMSI,!(identity_request_IMSI)), =>(identity_request_IMSI,H(identity_request_IMSI)), =>(identity_request_IMSI,Y(identity_request_IMSI))]
+2020-03-25 17:44:15,177: INFO - Total Running Time: 74.54 seconds
+2020-03-25 17:44:15,306: INFO - Synthesized Signatures:
+2020-03-25 17:44:15,306: INFO - (1) !(identity_request_IMSI)
+2020-03-25 17:44:15,306: INFO - (2) =>(identity_request_IMSI,Y(identity_request_IMSI))
+2020-03-25 17:44:15,306: INFO - (3) =>(identity_request_IMSI,H(identity_request_IMSI))
+2020-03-25 17:44:15,306: INFO - (4) =>(identity_request_IMSI,!(identity_request_IMSI))
+2020-03-25 17:44:15,306: INFO - (5) !(|(identity_request_IMSI,identity_request_IMSI))
+2020-03-25 17:44:15,307: INFO - Time: 74.85 seconds
+Dictionary Support Enabled
+
+FINAL WATCH: 77.48 CPU 77.25 WC

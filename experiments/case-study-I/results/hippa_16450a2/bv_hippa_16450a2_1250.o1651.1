@@ -1,0 +1,22 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1651.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1651.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 22:18:16,491: INFO - *** AP:['covered_entity_dislcoses_patient_psych_notes', 'authorization_psych_notes_revoked', 'receive_patient_authorization_psych_notes']
+2020-03-25 22:18:16,491: INFO - *** +ve Traces Size:400
+2020-03-25 22:18:16,491: INFO - *** -ve Traces Size:400
+2020-03-25 22:18:16,491: INFO - *** Formula Size:3
+2020-03-25 22:18:16,507: INFO - Running SyGuS(CVC4)...
+2020-03-25 22:18:16,507: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_221816_hippa_16450a2_1250_800_sygus_unrolled_encoding.sy']
+2020-03-25 22:18:21,784: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_psych_notes (_ BitVec 10)) (authorization_psych_notes_revoked (_ BitVec 10)) (receive_patient_authorization_psych_notes (_ BitVec 10))) (_ BitVec 10) (bvimpl covered_entity_dislcoses_patient_psych_notes (S (bvnot authorization_psych_notes_revoked) receive_patient_authorization_psych_notes)))\n'
+2020-03-25 22:18:21,819: INFO - Synthesized Formula =>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes))
+2020-03-25 22:18:21,819: INFO - Time: 5.33 seconds
+2020-03-25 22:18:34,939: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_psych_notes (_ BitVec 10)) (authorization_psych_notes_revoked (_ BitVec 10)) (receive_patient_authorization_psych_notes (_ BitVec 10))) (_ BitVec 10) (H (bvimpl covered_entity_dislcoses_patient_psych_notes (S (bvnot authorization_psych_notes_revoked) receive_patient_authorization_psych_notes))))\n'
+2020-03-25 22:18:34,960: INFO - Synthesized Formula H(=>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes)))
+2020-03-25 22:18:34,960: INFO - Time: 18.47 seconds
+2020-03-25 23:03:55,491: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_psych_notes (_ BitVec 10)) (authorization_psych_notes_revoked (_ BitVec 10)) (receive_patient_authorization_psych_notes (_ BitVec 10))) (_ BitVec 10) (bvimpl covered_entity_dislcoses_patient_psych_notes (H (bvimpl covered_entity_dislcoses_patient_psych_notes (S (bvnot authorization_psych_notes_revoked) receive_patient_authorization_psych_notes)))))\n'
+2020-03-25 23:03:56,764: INFO - Synthesized Formula =>(covered_entity_dislcoses_patient_psych_notes,H(=>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes))))
+2020-03-25 23:03:56,813: INFO - Time: 2740.32 seconds
+
+FINAL WATCH: 513.93 CPU 3600.42 WC
+Killed 1 orphans

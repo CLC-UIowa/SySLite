@@ -1,0 +1,5 @@
+(1) !(identity_request_not_well_formed)
+(2) =>(identity_request_not_well_formed,Y(identity_request_not_well_formed))
+(3) =>(identity_request_not_well_formed,attach_complete)
+(4) =>(identity_request_not_well_formed,H(identity_request_not_well_formed))
+(5) !(Y(identity_request_not_well_formed))

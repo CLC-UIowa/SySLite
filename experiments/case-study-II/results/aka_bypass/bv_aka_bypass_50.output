@@ -1,0 +1,5 @@
+(1) =>(rrcConnectionReconfiguration,S(!(rrcConnectionRequest),securityModeCommand))
+(2) H(=>(rrcConnectionReconfiguration,S(!(rrcConnectionRequest),securityModeCommand)))
+(3) =>(rrcConnectionReconfiguration,S(!(rrcConnectionRequest),|(securityModeCommand,systemInformationBlockType1)))
+(4) =>(rrcConnectionReconfiguration,S(!(rrcConnectionRequest),|(securityModeCommand,measurementReport)))
+(5) =>(rrcConnectionReconfiguration,S(!(rrcConnectionRequest),|(securityModeCommand,rrcConnectionReconfigurationComplete)))

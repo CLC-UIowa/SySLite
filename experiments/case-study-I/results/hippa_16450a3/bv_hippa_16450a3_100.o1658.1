@@ -1,0 +1,36 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1658.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1658.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 22:47:45,702: INFO - *** AP:['covered_entity_dislcoses_patient_info_for_marketing', 'receive_patient_authorization_marketing']
+2020-03-25 22:47:45,703: INFO - *** +ve Traces Size:32
+2020-03-25 22:47:45,703: INFO - *** -ve Traces Size:32
+2020-03-25 22:47:45,703: INFO - *** Formula Size:3
+2020-03-25 22:47:45,708: INFO - Running SyGuS(CVC4)...
+2020-03-25 22:47:45,708: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_224745_hippa_16450a3_100_64_sygus_unrolled_encoding.sy']
+2020-03-25 22:47:45,790: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_info_for_marketing (_ BitVec 10)) (receive_patient_authorization_marketing (_ BitVec 10))) (_ BitVec 10) (bvimpl covered_entity_dislcoses_patient_info_for_marketing (O receive_patient_authorization_marketing)))\n'
+2020-03-25 22:47:45,861: INFO - Synthesized Formula =>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))
+2020-03-25 22:47:45,862: INFO - Time: 0.16 seconds
+2020-03-25 22:47:45,862: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_info_for_marketing (_ BitVec 10)) (receive_patient_authorization_marketing (_ BitVec 10))) (_ BitVec 10) (H (bvimpl covered_entity_dislcoses_patient_info_for_marketing (O receive_patient_authorization_marketing))))\n'
+2020-03-25 22:47:45,885: INFO - Synthesized Formula H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing)))
+2020-03-25 22:47:45,885: INFO - Time: 0.18 seconds
+2020-03-25 22:47:46,049: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_info_for_marketing (_ BitVec 10)) (receive_patient_authorization_marketing (_ BitVec 10))) (_ BitVec 10) (bvimpl (O covered_entity_dislcoses_patient_info_for_marketing) (O receive_patient_authorization_marketing)))\n'
+2020-03-25 22:47:46,069: INFO - Synthesized Formula =>(O(covered_entity_dislcoses_patient_info_for_marketing),O(receive_patient_authorization_marketing))
+2020-03-25 22:47:46,069: INFO - Time: 0.36 seconds
+2020-03-25 22:47:46,867: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_info_for_marketing (_ BitVec 10)) (receive_patient_authorization_marketing (_ BitVec 10))) (_ BitVec 10) (bvor covered_entity_dislcoses_patient_info_for_marketing (H (bvimpl covered_entity_dislcoses_patient_info_for_marketing (O receive_patient_authorization_marketing)))))\n'
+2020-03-25 22:47:46,887: INFO - Synthesized Formula |(covered_entity_dislcoses_patient_info_for_marketing,H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))))
+2020-03-25 22:47:46,887: INFO - Time: 1.18 seconds
+2020-03-25 22:47:46,887: INFO - Synthesized Formula Definition b'(define-fun phi ((covered_entity_dislcoses_patient_info_for_marketing (_ BitVec 10)) (receive_patient_authorization_marketing (_ BitVec 10))) (_ BitVec 10) (bvimpl covered_entity_dislcoses_patient_info_for_marketing (H (bvimpl covered_entity_dislcoses_patient_info_for_marketing (O receive_patient_authorization_marketing)))))\n'
+2020-03-25 22:47:46,906: INFO - Synthesized Formula =>(covered_entity_dislcoses_patient_info_for_marketing,H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))))
+2020-03-25 22:47:46,906: INFO - Time: 1.20 seconds
+2020-03-25 22:47:46,907: INFO - Total Running Time Time: 1.20 seconds
+2020-03-25 22:47:47,380: INFO - Synthesized Signatures:
+2020-03-25 22:47:47,380: INFO - (1) =>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))
+2020-03-25 22:47:47,380: INFO - (2) H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing)))
+2020-03-25 22:47:47,380: INFO - (3) =>(O(covered_entity_dislcoses_patient_info_for_marketing),O(receive_patient_authorization_marketing))
+2020-03-25 22:47:47,380: INFO - (4) |(covered_entity_dislcoses_patient_info_for_marketing,H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))))
+2020-03-25 22:47:47,380: INFO - (5) =>(covered_entity_dislcoses_patient_info_for_marketing,H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))))
+2020-03-25 22:47:47,381: INFO - Time: 1.71 seconds
+Dictionary Support Enabled
+
+FINAL WATCH: 2.33 CPU 3.27 WC

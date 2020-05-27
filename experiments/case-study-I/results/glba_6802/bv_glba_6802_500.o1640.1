@@ -1,0 +1,36 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1640.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1640.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 21:39:15,905: INFO - *** AP:['institution_dislcloses_to_affiliate_customers_npi', 'customer_opt_out', 'notice_of_disclosure']
+2020-03-25 21:39:15,905: INFO - *** +ve Traces Size:160
+2020-03-25 21:39:15,905: INFO - *** -ve Traces Size:160
+2020-03-25 21:39:15,905: INFO - *** Formula Size:3
+2020-03-25 21:39:15,916: INFO - Running SyGuS(CVC4)...
+2020-03-25 21:39:15,916: INFO - Command: ['/mnt/nfs/home/marif/fmcad/run-scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_213915_glba_6802_500_320_sygus_unrolled_encoding.sy']
+2020-03-25 21:39:17,731: INFO - Synthesized Formula Definition b'(define-fun phi ((institution_dislcloses_to_affiliate_customers_npi (_ BitVec 10)) (customer_opt_out (_ BitVec 10)) (notice_of_disclosure (_ BitVec 10))) (_ BitVec 10) (bvimpl institution_dislcloses_to_affiliate_customers_npi (S (bvnot customer_opt_out) notice_of_disclosure)))\n'
+2020-03-25 21:39:17,765: INFO - Synthesized Formula =>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))
+2020-03-25 21:39:17,765: INFO - Time: 1.86 seconds
+2020-03-25 21:39:23,514: INFO - Synthesized Formula Definition b'(define-fun phi ((institution_dislcloses_to_affiliate_customers_npi (_ BitVec 10)) (customer_opt_out (_ BitVec 10)) (notice_of_disclosure (_ BitVec 10))) (_ BitVec 10) (H (bvimpl institution_dislcloses_to_affiliate_customers_npi (S (bvnot customer_opt_out) notice_of_disclosure))))\n'
+2020-03-25 21:39:23,534: INFO - Synthesized Formula H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure)))
+2020-03-25 21:39:23,534: INFO - Time: 7.63 seconds
+2020-03-25 21:42:23,427: INFO - Synthesized Formula Definition b'(define-fun phi ((institution_dislcloses_to_affiliate_customers_npi (_ BitVec 10)) (customer_opt_out (_ BitVec 10)) (notice_of_disclosure (_ BitVec 10))) (_ BitVec 10) (bvimpl institution_dislcloses_to_affiliate_customers_npi (H (bvimpl institution_dislcloses_to_affiliate_customers_npi (S (bvnot customer_opt_out) notice_of_disclosure)))))\n'
+2020-03-25 21:42:23,447: INFO - Synthesized Formula =>(institution_dislcloses_to_affiliate_customers_npi,H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))))
+2020-03-25 21:42:23,448: INFO - Time: 187.54 seconds
+2020-03-25 21:43:36,477: INFO - Synthesized Formula Definition b'(define-fun phi ((institution_dislcloses_to_affiliate_customers_npi (_ BitVec 10)) (customer_opt_out (_ BitVec 10)) (notice_of_disclosure (_ BitVec 10))) (_ BitVec 10) (bvimpl institution_dislcloses_to_affiliate_customers_npi (bvand (bvimpl customer_opt_out notice_of_disclosure) (S (bvimpl customer_opt_out institution_dislcloses_to_affiliate_customers_npi) notice_of_disclosure))))\n'
+2020-03-25 21:43:36,498: INFO - Synthesized Formula =>(institution_dislcloses_to_affiliate_customers_npi,&(=>(customer_opt_out,notice_of_disclosure),S(=>(customer_opt_out,institution_dislcloses_to_affiliate_customers_npi),notice_of_disclosure)))
+2020-03-25 21:43:36,498: INFO - Time: 260.59 seconds
+2020-03-25 21:56:17,778: INFO - Synthesized Formula Definition b'(define-fun phi ((institution_dislcloses_to_affiliate_customers_npi (_ BitVec 10)) (customer_opt_out (_ BitVec 10)) (notice_of_disclosure (_ BitVec 10))) (_ BitVec 10) (bvor notice_of_disclosure (H (bvimpl institution_dislcloses_to_affiliate_customers_npi (S (bvnot customer_opt_out) notice_of_disclosure)))))\n'
+2020-03-25 21:56:22,780: INFO - Synthesized Formula |(notice_of_disclosure,H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))))
+2020-03-25 21:56:22,847: INFO - Time: 1026.94 seconds
+2020-03-25 21:56:24,612: INFO - Total Running Time Time: 1028.62 seconds
+2020-03-25 21:56:31,267: INFO - Synthesized Signatures:
+2020-03-25 21:56:31,267: INFO - (1) =>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))
+2020-03-25 21:56:31,267: INFO - (2) H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure)))
+2020-03-25 21:56:31,267: INFO - (3) =>(institution_dislcloses_to_affiliate_customers_npi,H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))))
+2020-03-25 21:56:31,267: INFO - (4) =>(institution_dislcloses_to_affiliate_customers_npi,&(=>(customer_opt_out,notice_of_disclosure),S(=>(customer_opt_out,institution_dislcloses_to_affiliate_customers_npi),notice_of_disclosure)))
+2020-03-25 21:56:31,268: INFO - (5) |(notice_of_disclosure,H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))))
+2020-03-25 21:56:31,331: INFO - Time: 1035.56 seconds
+Dictionary Support Enabled
+
+FINAL WATCH: 424.17 CPU 1040.92 WC

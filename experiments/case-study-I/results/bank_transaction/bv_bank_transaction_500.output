@@ -1,0 +1,5 @@
+(1) =>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved))
+(2) H(=>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved)))
+(3) =>(O(Transaction_over_threshold_performed),O(Transaction_over_threshold_approved))
+(4) =>(Transaction_over_threshold_performed,H(=>(Transaction_over_threshold_performed,O(Transaction_over_threshold_approved))))
+(5) =>(Transaction_over_threshold_performed,O(|(Transaction_over_threshold_approved,Y(Transaction_over_threshold_performed))))

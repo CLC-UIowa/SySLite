@@ -1,0 +1,37 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1521.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1521.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 17:42:32,106: INFO - *** AP:['attach_request', 'authentication_response', 'identity_request_GUTI', 'attach_complete', 'detach_request', 'identity_request', 'tracking_area_update_request', 'security_mode_complete', 'extended_service_request', 'service_request', 'attach_accept', 'emm_information', 'identity_request_IMEI', 'identity_request_IMSI', 'authentication_request', 'security_mode_command', 'tracking_area_update_complete', 'tracking_area_update_accept', 'identity_response', 'detach_accept']
+2020-03-25 17:42:32,106: INFO - *** +ve Traces Size:400
+2020-03-25 17:42:32,106: INFO - *** -ve Traces Size:400
+2020-03-25 17:42:32,106: INFO - *** Formula Size:3
+2020-03-25 17:42:32,383: INFO - Running SyGuS(CVC4)...
+2020-03-25 17:42:32,384: INFO - Command: ['/mnt/nfs/home/marif/fmcad-expriments/run_scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_174232_imsi_catching_1250_800_sygus_unrolled_encoding.sy']
+2020-03-25 17:42:33,430: INFO - Synthesized Formula Definition b'(define-fun phi ((attach_request (_ BitVec 91)) (authentication_response (_ BitVec 91)) (identity_request_GUTI (_ BitVec 91)) (attach_complete (_ BitVec 91)) (detach_request (_ BitVec 91)) (identity_request (_ BitVec 91)) (tracking_area_update_request (_ BitVec 91)) (security_mode_complete (_ BitVec 91)) (extended_service_request (_ BitVec 91)) (service_request (_ BitVec 91)) (attach_accept (_ BitVec 91)) (emm_information (_ BitVec 91)) (identity_request_IMEI (_ BitVec 91)) (identity_request_IMSI (_ BitVec 91)) (authentication_request (_ BitVec 91)) (security_mode_command (_ BitVec 91)) (tracking_area_update_complete (_ BitVec 91)) (tracking_area_update_accept (_ BitVec 91)) (identity_response (_ BitVec 91)) (detach_accept (_ BitVec 91))) (_ BitVec 91) (bvnot identity_request_IMSI))\n'
+2020-03-25 17:42:33,465: INFO - Synthesized Formula !(identity_request_IMSI)
+2020-03-25 17:42:33,465: INFO - Time: 1.36 seconds
+2020-03-25 17:42:34,331: INFO - Synthesized Formula Definition b'(define-fun phi ((attach_request (_ BitVec 91)) (authentication_response (_ BitVec 91)) (identity_request_GUTI (_ BitVec 91)) (attach_complete (_ BitVec 91)) (detach_request (_ BitVec 91)) (identity_request (_ BitVec 91)) (tracking_area_update_request (_ BitVec 91)) (security_mode_complete (_ BitVec 91)) (extended_service_request (_ BitVec 91)) (service_request (_ BitVec 91)) (attach_accept (_ BitVec 91)) (emm_information (_ BitVec 91)) (identity_request_IMEI (_ BitVec 91)) (identity_request_IMSI (_ BitVec 91)) (authentication_request (_ BitVec 91)) (security_mode_command (_ BitVec 91)) (tracking_area_update_complete (_ BitVec 91)) (tracking_area_update_accept (_ BitVec 91)) (identity_response (_ BitVec 91)) (detach_accept (_ BitVec 91))) (_ BitVec 91) (H (bvnot identity_request_IMSI)))\n'
+2020-03-25 17:42:34,352: INFO - Synthesized Formula H(!(identity_request_IMSI))
+2020-03-25 17:42:34,352: INFO - Time: 2.24 seconds
+2020-03-25 17:42:34,352: INFO - Synthesized Formula Definition b'(define-fun phi ((attach_request (_ BitVec 91)) (authentication_response (_ BitVec 91)) (identity_request_GUTI (_ BitVec 91)) (attach_complete (_ BitVec 91)) (detach_request (_ BitVec 91)) (identity_request (_ BitVec 91)) (tracking_area_update_request (_ BitVec 91)) (security_mode_complete (_ BitVec 91)) (extended_service_request (_ BitVec 91)) (service_request (_ BitVec 91)) (attach_accept (_ BitVec 91)) (emm_information (_ BitVec 91)) (identity_request_IMEI (_ BitVec 91)) (identity_request_IMSI (_ BitVec 91)) (authentication_request (_ BitVec 91)) (security_mode_command (_ BitVec 91)) (tracking_area_update_complete (_ BitVec 91)) (tracking_area_update_accept (_ BitVec 91)) (identity_response (_ BitVec 91)) (detach_accept (_ BitVec 91))) (_ BitVec 91) (bvnot (Y identity_request_IMSI)))\n'
+2020-03-25 17:42:34,373: INFO - Synthesized Formula !(Y(identity_request_IMSI))
+2020-03-25 17:42:34,373: INFO - Time: 2.27 seconds
+2020-03-25 17:42:34,715: INFO - Synthesized Formula Definition b'(define-fun phi ((attach_request (_ BitVec 91)) (authentication_response (_ BitVec 91)) (identity_request_GUTI (_ BitVec 91)) (attach_complete (_ BitVec 91)) (detach_request (_ BitVec 91)) (identity_request (_ BitVec 91)) (tracking_area_update_request (_ BitVec 91)) (security_mode_complete (_ BitVec 91)) (extended_service_request (_ BitVec 91)) (service_request (_ BitVec 91)) (attach_accept (_ BitVec 91)) (emm_information (_ BitVec 91)) (identity_request_IMEI (_ BitVec 91)) (identity_request_IMSI (_ BitVec 91)) (authentication_request (_ BitVec 91)) (security_mode_command (_ BitVec 91)) (tracking_area_update_complete (_ BitVec 91)) (tracking_area_update_accept (_ BitVec 91)) (identity_response (_ BitVec 91)) (detach_accept (_ BitVec 91))) (_ BitVec 91) (bvnot (S detach_request identity_request_IMSI)))\n'
+2020-03-25 17:42:34,736: INFO - Synthesized Formula !(S(detach_request,identity_request_IMSI))
+2020-03-25 17:42:34,736: INFO - Time: 2.63 seconds
+2020-03-25 17:42:35,082: INFO - Synthesized Formula Definition b'(define-fun phi ((attach_request (_ BitVec 91)) (authentication_response (_ BitVec 91)) (identity_request_GUTI (_ BitVec 91)) (attach_complete (_ BitVec 91)) (detach_request (_ BitVec 91)) (identity_request (_ BitVec 91)) (tracking_area_update_request (_ BitVec 91)) (security_mode_complete (_ BitVec 91)) (extended_service_request (_ BitVec 91)) (service_request (_ BitVec 91)) (attach_accept (_ BitVec 91)) (emm_information (_ BitVec 91)) (identity_request_IMEI (_ BitVec 91)) (identity_request_IMSI (_ BitVec 91)) (authentication_request (_ BitVec 91)) (security_mode_command (_ BitVec 91)) (tracking_area_update_complete (_ BitVec 91)) (tracking_area_update_accept (_ BitVec 91)) (identity_response (_ BitVec 91)) (detach_accept (_ BitVec 91))) (_ BitVec 91) (bvnot (S attach_accept identity_request_IMSI)))\n'
+2020-03-25 17:42:35,103: INFO - Synthesized Formula !(S(attach_accept,identity_request_IMSI))
+2020-03-25 17:42:35,103: INFO - Time: 3.00 seconds
+2020-03-25 17:42:35,103: INFO - Total Running Time Time: 3.00 seconds
+2020-03-25 17:42:51,501: INFO - Synthesized Signatures:
+2020-03-25 17:42:51,501: INFO - (1) !(identity_request_IMSI)
+2020-03-25 17:42:51,501: INFO - (2) H(!(identity_request_IMSI))
+2020-03-25 17:42:51,501: INFO - (3) !(Y(identity_request_IMSI))
+2020-03-25 17:42:51,501: INFO - (4) !(S(detach_request,identity_request_IMSI))
+2020-03-25 17:42:51,501: INFO - (5) !(S(attach_accept,identity_request_IMSI))
+2020-03-25 17:42:51,503: INFO - Time: 21.17 seconds
+Dictionary Support Enabled
+WARNING: TreeLimitedRun lost 0.32s, total lost is 0.32s
+
+FINAL WATCH: 20.37 CPU 22.43 WC

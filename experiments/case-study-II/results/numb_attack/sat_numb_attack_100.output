@@ -1,0 +1,5 @@
+(1) =>(authentication_reject,S(authentication_reject,authentication_response))
+(2) =>(authentication_reject,Y(authentication_response))
+(3) =>(S(authentication_reject,authentication_reject),S(authentication_reject,authentication_response))
+(4) =>(S(authentication_response,authentication_reject),S(authentication_reject,authentication_response))
+(5) =>(authentication_reject,S(Y(authentication_response),Y(authentication_response)))

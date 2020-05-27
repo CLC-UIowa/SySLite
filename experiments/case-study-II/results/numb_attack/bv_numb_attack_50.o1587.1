@@ -1,0 +1,37 @@
+/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1587.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/bin:/usr/lib64/qt-3.3/bin:/home/marif/perl5/bin:/tmp/1587.1.kind.q:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/marif/.local/bin:/home/marif/bin
+/export/home/marif/fmcad/pLTL-Synthesizer/env/lib64/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.tree.export module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.tree. Anything that cannot be imported from sklearn.tree is now part of the private API.
+  warnings.warn(message, FutureWarning)
+2020-03-25 20:11:52,627: INFO - *** AP:['tracking_area_update_request', 'attach_accept', 'service_request', 'attach_request', 'detach_accept', 'attach_complete', 'authentication_request', 'security_mode_command', 'identity_response', 'emm_information', 'tracking_area_update_accept', 'detach_request', 'identity_request', 'extended_service_request', 'authentication_response', 'authentication_reject', 'security_mode_complete', 'tracking_area_update_complete']
+2020-03-25 20:11:52,628: INFO - *** +ve Traces Size:16
+2020-03-25 20:11:52,628: INFO - *** -ve Traces Size:16
+2020-03-25 20:11:52,628: INFO - *** Formula Size:3
+2020-03-25 20:11:52,640: INFO - Running SyGuS(CVC4)...
+2020-03-25 20:11:52,640: INFO - Command: ['/mnt/nfs/home/marif/fmcad-expriments/run_scripts/resources/cvc4', '--lang=sygus2', '--sygus-stream', '--sygus-sym-break-pbe', '2020-03-25_201152_numb_attack_50_32_sygus_unrolled_encoding.sy']
+2020-03-25 20:11:53,768: INFO - Synthesized Formula Definition b'(define-fun phi ((tracking_area_update_request (_ BitVec 58)) (attach_accept (_ BitVec 58)) (service_request (_ BitVec 58)) (attach_request (_ BitVec 58)) (detach_accept (_ BitVec 58)) (attach_complete (_ BitVec 58)) (authentication_request (_ BitVec 58)) (security_mode_command (_ BitVec 58)) (identity_response (_ BitVec 58)) (emm_information (_ BitVec 58)) (tracking_area_update_accept (_ BitVec 58)) (detach_request (_ BitVec 58)) (identity_request (_ BitVec 58)) (extended_service_request (_ BitVec 58)) (authentication_response (_ BitVec 58)) (authentication_reject (_ BitVec 58)) (security_mode_complete (_ BitVec 58)) (tracking_area_update_complete (_ BitVec 58))) (_ BitVec 58) (bvimpl authentication_reject (Y authentication_response)))\n'
+2020-03-25 20:11:53,804: INFO - Synthesized Formula =>(authentication_reject,Y(authentication_response))
+2020-03-25 20:11:53,804: INFO - Time: 1.17 seconds
+2020-03-25 20:11:55,262: INFO - Synthesized Formula Definition b'(define-fun phi ((tracking_area_update_request (_ BitVec 58)) (attach_accept (_ BitVec 58)) (service_request (_ BitVec 58)) (attach_request (_ BitVec 58)) (detach_accept (_ BitVec 58)) (attach_complete (_ BitVec 58)) (authentication_request (_ BitVec 58)) (security_mode_command (_ BitVec 58)) (identity_response (_ BitVec 58)) (emm_information (_ BitVec 58)) (tracking_area_update_accept (_ BitVec 58)) (detach_request (_ BitVec 58)) (identity_request (_ BitVec 58)) (extended_service_request (_ BitVec 58)) (authentication_response (_ BitVec 58)) (authentication_reject (_ BitVec 58)) (security_mode_complete (_ BitVec 58)) (tracking_area_update_complete (_ BitVec 58))) (_ BitVec 58) (H (bvimpl authentication_reject (Y authentication_response))))\n'
+2020-03-25 20:11:55,283: INFO - Synthesized Formula H(=>(authentication_reject,Y(authentication_response)))
+2020-03-25 20:11:55,283: INFO - Time: 2.65 seconds
+2020-03-25 20:12:13,010: INFO - Synthesized Formula Definition b'(define-fun phi ((tracking_area_update_request (_ BitVec 58)) (attach_accept (_ BitVec 58)) (service_request (_ BitVec 58)) (attach_request (_ BitVec 58)) (detach_accept (_ BitVec 58)) (attach_complete (_ BitVec 58)) (authentication_request (_ BitVec 58)) (security_mode_command (_ BitVec 58)) (identity_response (_ BitVec 58)) (emm_information (_ BitVec 58)) (tracking_area_update_accept (_ BitVec 58)) (detach_request (_ BitVec 58)) (identity_request (_ BitVec 58)) (extended_service_request (_ BitVec 58)) (authentication_response (_ BitVec 58)) (authentication_reject (_ BitVec 58)) (security_mode_complete (_ BitVec 58)) (tracking_area_update_complete (_ BitVec 58))) (_ BitVec 58) (bvimpl (O authentication_reject) (Y authentication_response)))\n'
+2020-03-25 20:12:13,032: INFO - Synthesized Formula =>(O(authentication_reject),Y(authentication_response))
+2020-03-25 20:12:13,032: INFO - Time: 20.40 seconds
+2020-03-25 20:18:13,080: INFO - Synthesized Formula Definition b'(define-fun phi ((tracking_area_update_request (_ BitVec 58)) (attach_accept (_ BitVec 58)) (service_request (_ BitVec 58)) (attach_request (_ BitVec 58)) (detach_accept (_ BitVec 58)) (attach_complete (_ BitVec 58)) (authentication_request (_ BitVec 58)) (security_mode_command (_ BitVec 58)) (identity_response (_ BitVec 58)) (emm_information (_ BitVec 58)) (tracking_area_update_accept (_ BitVec 58)) (detach_request (_ BitVec 58)) (identity_request (_ BitVec 58)) (extended_service_request (_ BitVec 58)) (authentication_response (_ BitVec 58)) (authentication_reject (_ BitVec 58)) (security_mode_complete (_ BitVec 58)) (tracking_area_update_complete (_ BitVec 58))) (_ BitVec 58) (bvimpl (O authentication_reject) (Y (bvor authentication_response authentication_reject))))\n'
+2020-03-25 20:18:13,102: INFO - Synthesized Formula =>(O(authentication_reject),Y(|(authentication_response,authentication_reject)))
+2020-03-25 20:18:13,102: INFO - Time: 380.47 seconds
+2020-03-25 20:18:13,102: INFO - Synthesized Formula Definition b'(define-fun phi ((tracking_area_update_request (_ BitVec 58)) (attach_accept (_ BitVec 58)) (service_request (_ BitVec 58)) (attach_request (_ BitVec 58)) (detach_accept (_ BitVec 58)) (attach_complete (_ BitVec 58)) (authentication_request (_ BitVec 58)) (security_mode_command (_ BitVec 58)) (identity_response (_ BitVec 58)) (emm_information (_ BitVec 58)) (tracking_area_update_accept (_ BitVec 58)) (detach_request (_ BitVec 58)) (identity_request (_ BitVec 58)) (extended_service_request (_ BitVec 58)) (authentication_response (_ BitVec 58)) (authentication_reject (_ BitVec 58)) (security_mode_complete (_ BitVec 58)) (tracking_area_update_complete (_ BitVec 58))) (_ BitVec 58) (bvimpl (O authentication_reject) (Y (S authentication_reject authentication_response))))\n'
+2020-03-25 20:18:13,123: INFO - Synthesized Formula =>(O(authentication_reject),Y(S(authentication_reject,authentication_response)))
+2020-03-25 20:18:13,123: INFO - Time: 380.49 seconds
+2020-03-25 20:18:13,123: INFO - Total Running Time Time: 380.49 seconds
+2020-03-25 20:18:13,584: INFO - Synthesized Signatures:
+2020-03-25 20:18:13,584: INFO - (1) =>(authentication_reject,Y(authentication_response))
+2020-03-25 20:18:13,584: INFO - (2) H(=>(authentication_reject,Y(authentication_response)))
+2020-03-25 20:18:13,584: INFO - (3) =>(O(authentication_reject),Y(authentication_response))
+2020-03-25 20:18:13,584: INFO - (4) =>(O(authentication_reject),Y(|(authentication_response,authentication_reject)))
+2020-03-25 20:18:13,584: INFO - (5) =>(O(authentication_reject),Y(S(authentication_reject,authentication_response)))
+2020-03-25 20:18:13,585: INFO - Time: 381.05 seconds
+Dictionary Support Enabled
+WARNING: TreeLimitedRun lost 375.65s, total lost is 375.65s
+
+FINAL WATCH: 378.26 CPU 384.72 WC

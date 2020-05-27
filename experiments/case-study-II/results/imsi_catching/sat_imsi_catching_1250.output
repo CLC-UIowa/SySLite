@@ -1,0 +1,5 @@
+(1) !(identity_request_IMSI)
+(2) =>(identity_request_IMSI,extended_service_request)
+(3) =>(identity_request_IMSI,authentication_response)
+(4) =>(identity_request_IMSI,detach_accept)
+(5) =>(identity_request_IMSI,H(identity_request_IMSI))

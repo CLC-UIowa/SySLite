@@ -1,0 +1,4 @@
+(1) =>(measurementReport,S(!(rrcConnectionRelease),securityModeComplete))
+(2) H(=>(measurementReport,S(!(rrcConnectionRelease),securityModeComplete)))
+(3) =>(measurementReport,S(!(rrcConnectionRelease),|(systemInformation,securityModeComplete)))
+(4) =>(measurementReport,S(!(rrcConnectionRelease),|(securityModeComplete,systemInformationBlockType1)))

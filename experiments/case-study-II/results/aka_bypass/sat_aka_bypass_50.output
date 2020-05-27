@@ -1,0 +1,5 @@
+(1) =>(rrcConnectionReconfiguration,S(=>(rrcConnectionRequest,securityModeComplete),securityModeComplete))
+(2) =>(rrcConnectionReconfiguration,S(=>(rrcConnectionRelease,securityModeComplete),securityModeComplete))
+(3) =>(rrcConnectionReconfiguration,S(=>(rrcConnectionSetupComplete,securityModeComplete),securityModeComplete))
+(4) =>(rrcConnectionReconfiguration,S(=>(rrcConnectionSetup,securityModeComplete),securityModeComplete))
+(5) =>(rrcConnectionReconfiguration,S(!(rrcConnectionRelease),securityModeComplete))
