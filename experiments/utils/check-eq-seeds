@@ -1,0 +1,125 @@
+start=`date +%s`
+echo "Equivalence Check using GOAL:"
+echo "Chinese Wall Policy:"
+echo "Seed == SySLite"
+echo -n 1;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))"  "[](~(access_org1_records) /\ O(access_org2_records))"
+echo -n 2;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))"  "[](~(access_org1_records) /\ access_org2_records)"
+echo -n 3;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))"  "[](~(access_org1_records) /\ O(access_org2_records))"
+echo -n 4;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))"  "[](~(access_org1_records) /\ O(access_org2_records))"
+echo -n 5;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))"  "[](~(O(access_org1_records) /\ O(access_org2_records)))"
+echo "Seed == SAT"
+echo -n 1;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))" "[](O(access_org1_records) --> ~(access_org2_records))"
+echo -n 2;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))" "[](~((access_org2_records) /\ O(access_org1_records)))"
+echo -n 3;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))" "[](~((access_org1_records) /\ O(access_org2_records)))"
+echo -n 4;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))" "[](~((access_org1_records) /\ O(access_org2_records)))"
+echo -n 5;./utils/cmp "[]((access_org1_records --> ~(O(access_org2_records))) /\ (access_org2_records --> ~(O(access_org1_records))))"  None
+
+echo "Bank Transaction Policy:"
+
+echo "Seed == SySLite"
+echo -n 1;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))"
+echo -n 2;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))"
+echo -n 3;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))"
+echo -n 4;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))"
+echo -n 5;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))"
+
+echo "Seed == SAT"
+echo -n 1;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))"
+echo -n 2;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))"
+echo -n 3;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))"
+echo -n 4;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" 
+echo -n 5;./utils/cmp "[](Transaction_over_threshold_performed --> O(Transaction_over_threshold_approved))" None
+
+echo "Secure File"
+
+echo "Seed == SySLite"
+echo -n 1;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" "[](secure_file_open --> Y(~(secure_file_open) S (Y(a \/ ~a) --> secure_file_closed)))"
+echo -n 2;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" "[](secure_file_open --> Y(~(secure_file_open) S (Y(a \/ ~a) --> secure_file_closed)))"
+echo -n 3;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" "[](secure_file_open --> Y(~(secure_file_open) S (Y(a \/ ~a) --> secure_file_closed)))"
+echo -n 4;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" "[](secure_file_open --> Y(~(secure_file_open) S (Y(a \/ ~a) --> secure_file_closed)))"
+echo -n 5;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" "[](secure_file_open --> Y(~(secure_file_open) S (Y(a \/ ~a) --> secure_file_closed)))"
+
+echo "Seed == SAT"
+echo -n 1;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" None
+echo -n 2;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" None
+echo -n 3;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" None
+echo -n 4;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" None
+echo -n 5;./utils/cmp "[](secure_file_open --> (Y(H(~(secure_file_open))) \/ Y(~(secure_file_open) S secure_file_closed)))" None
+
+echo "GLBA 6802"
+echo "Seed == SySLite"
+echo -n 1;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))"
+echo -n 2;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))"
+echo -n 3;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))"
+echo -n 4;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" 
+echo -n 5;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))"
+
+echo "Seed == SAT"
+echo -n 1;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))"
+echo -n 2;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" None
+echo -n 3;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" None
+echo -n 4;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" None
+echo -n 5;./utils/cmp "[](institution_discloses_to_affiliate_customers_npi --> (~(customer_opt_out) S notice_of_disclosure))" None
+
+echo "Financial Institute"
+echo "Seed == SySLite"
+echo -n 1;./utils/cmp "[](grant --> Y(~(grant) S request))" "[](grant --> Y(~(grant) S request))"
+echo -n 2;./utils/cmp "[](grant --> Y(~(grant) S request))" "[](grant --> Y(~(grant) S request))"
+echo -n 3;./utils/cmp "[](grant --> Y(~(grant) S request))" "[](grant --> Y(~(grant) S request))"
+echo -n 4;./utils/cmp "[](grant --> Y(~(grant) S request))" "[](grant --> Y(~(grant) S request))"
+echo -n 5;./utils/cmp "[](grant --> Y(~(grant) S request))" "[](grant --> Y(~(grant) S request))"
+
+echo "Seed == SAT"
+echo -n 1;./utils/cmp "[](grant --> Y(~(grant) S request))" "[](grant --> Y(~(grant) S request))"
+echo -n 2;./utils/cmp "[](grant --> Y(~(grant) S request))" "[](grant --> Y(~(grant) S request))"
+echo -n 3;./utils/cmp "[](grant --> Y(~(grant) S request))" None
+echo -n 4;./utils/cmp "[](grant --> Y(~(grant) S request))" None
+echo -n 5;./utils/cmp "[](grant --> Y(~(grant) S request))" None
+
+echo "HIPPA 164508A2"
+echo "Seed == SySLite"
+echo -n 1;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))"
+echo -n 2;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))"
+echo -n 3;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))"
+echo -n 4;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))"
+echo -n 5;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))"
+
+echo "Seed == SAT"
+echo -n 1;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" "[]((covered_entity_discloses_patient_psych_notes /\ authorization_psych_notes_revoked) --> receive_patient_authorization_psych_notes)"
+echo -n 2;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" None
+echo -n 3;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" None
+echo -n 4;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" None
+echo -n 5;./utils/cmp "[](covered_entity_discloses_patient_psych_notes --> (~(authorization_psych_notes_revoked) S receive_patient_authorization_psych_notes))" None
+
+echo "HIPAA 164508a3"
+echo "Seed == SySLite"
+echo -n 1;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+echo -n 2;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+echo -n 3;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+echo -n 4;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+echo -n 5;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+
+echo "Seed == SAT"
+echo -n 1;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+echo -n 2;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+echo -n 3;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+echo -n 4;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))"
+echo -n 5;./utils/cmp "[](covered_entity_discloses_patient_info_for_marketing --> O(receive_patient_authorization_marketing))" None
+
+echo "Dynamic Separation of Duty"
+echo "Seed == SySLite"
+echo -n 1;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y(~(member_activates_role2) S member_deactivates_role2)))" "[](Y(member_activates_role2 --> member_deactivates_role2) S ~(member_activates_role1))"
+echo -n 2;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y(~(member_activates_role2) S member_deactivates_role2)))" "[](Y(member_activates_role2 --> member_deactivates_role2) S ~(member_activates_role1))"
+echo -n 3;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y((member_deactivates_role2 S ~(member_activates_role2)))))" None
+echo -n 4;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y((member_deactivates_role2 S ~(member_activates_role2)))))" None
+echo -n 5;"[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y((member_deactivates_role2 S ~(member_activates_role2)))))" None
+
+echo "Seed == SAT"
+echo -n 1;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y(~(member_activates_role2) S member_deactivates_role2)))" "[](~(member_activates_role1) S Y(member_activates_role2 --> member_deactivates_role2))"
+echo -n 2;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y(~(member_activates_role2) S member_deactivates_role2)))" "[](~(member_activates_role1) S Y(member_activates_role2 --> member_deactivates_role2))"
+echo -n 3;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y(~(member_activates_role2) S member_deactivates_role2)))" None
+echo -n 4;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y(~(member_activates_role2) S member_deactivates_role2)))" None
+echo -n 5;./utils/cmp "[](member_activates_role1 --> (Y(H(~(member_activates_role2))) \/ Y(~(member_activates_role2) S member_deactivates_role2)))" None
+end=`date +%s`
+runtime=$((end-start))
+echo "Execution Time: $runtime seconds."

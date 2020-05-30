@@ -1,0 +1,26 @@
+./utils/header
+./case-study-I/bnk-eval-result
+
+./utils/hline
+./case-study-I/cn-eval-result
+
+./utils/hline
+./case-study-I/dsd-eval-result
+
+./utils/hline
+./case-study-I/glba-eval-result
+
+./utils/hline
+./case-study-I/hipa2-eval-result
+
+./utils/hline
+./case-study-I/hipa3-eval-result
+
+./utils/hline
+./case-study-I/fi-eval-result
+./utils/hline
+
+./utils/header
+echo "Equivalence Check seed Formulas"
+./utils/hline
+./utils/check-eq-seeds

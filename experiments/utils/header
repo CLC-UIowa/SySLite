@@ -1,0 +1,5 @@
+header="Index, Literature Formula, Sample Size, SySLite(Synthesized Formula),SySLite(Precision, Recall, F1), SAT(Synthesized Formula), SAT(Precision, Recall, F1)"
+sep=$(seq -f "=" 77)
+echo $sep
+echo $header 
+echo $sep

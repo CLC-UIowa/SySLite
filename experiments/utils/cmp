@@ -1,0 +1,4 @@
+fml1=$1
+fml2=$2
+output=$( ./utils/goal validity "$fml1  <--> $fml2" )
+echo $fml1 "==" $fml2 " " "$output"
