@@ -7,7 +7,7 @@ SysLite makes use of decision and synthesis procedures (\ie `SAT`, `SMT`, and `S
 
 1. To build: `./tool-setup` 
 
-2. To run: `./Driver --help`
+2. To run: `./src/Driver.py --help`
 
 ## Usage
 
@@ -69,7 +69,7 @@ S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
 
 ## Experiments:
 
-The details about the experiments are described in the undermentioned paper. 
+The details about the experiments are described in the paper. 
 The training and test data include results are contained in [Experiments](https://github.com/CLC-UIowa/SySLite/tree/master/experiments)
 
 ### Reference:
