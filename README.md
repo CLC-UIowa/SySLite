@@ -32,7 +32,9 @@ The tool currently supports a list of algorithms that can be invoked with `-a` o
 
 Example Encoding Files:
 -----------------------
-All the proposed encoding files exist under the repository: [SySLite/eas-example/](https://github.com/CLC-UIowa/SySLite/tree/master/eas-example)
+All the proposed encoding files are instantiated using 
+[`eas.trace`](https://github.com/CLC-UIowa/SySLite/tree/master/eas-example) example are:
+
 1. [eas-adt-enc.sy](https://github.com/CLC-UIowa/SySLite/blob/master/eas-example/eas-adt-enc.sy) (\* ADT with SyGuS \*)
 2. [eas-bv-enc.sy](https://github.com/CLC-UIowa/SySLite/blob/master/eas-example/eas-bv-enc.sy) (\* Bitvector with SyGuS \*)
 3. [eas-fnf-enc.smt2](https://github.com/CLC-UIowa/SySLite/blob/master/eas-example/eas-fnf-enc.smt2) (\* ADT using Finite Model Finding \*) 
