@@ -44,7 +44,7 @@ These encodings can be tested using off-the-shelf [CVC4SY](https://github.com/CL
 `./cvc4 FILENAME.smt2`
 
 ### Input File Format:
-An example trace file is provided in file `eas.trace`.
+An example trace file is provided in file [`eas.trace`](https://github.com/CLC-UIowa/SySLite/tree/master/eas-example).
 
 The input traces files contains alphabets, positive and negative example traces, supported operators 
 separated by `---`. 
