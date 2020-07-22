@@ -43,7 +43,7 @@ These encodings can be tested using off-the-shelf [CVC4SY](https://github.com/CL
 
 `./cvc4 FILENAME.smt2`
 
-##Input File Format:
+### Input File Format:
 An example trace file is provided in file `eas.trace`.
 
 The input traces files contains alphabets, positive and negative example traces, supported operators 
@@ -67,7 +67,8 @@ S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
 
 ## Experiments:
 
-The details about the experiments are described in the undermentioned paper. The training and test data include results are contained in [Experiments](https://github.com/CLC-UIowa/SySLite/tree/master/experiments)
+The details about the experiments are described in the undermentioned paper. 
+The training and test data include results are contained in [Experiments](https://github.com/CLC-UIowa/SySLite/tree/master/experiments)
 
 ### Reference:
 
