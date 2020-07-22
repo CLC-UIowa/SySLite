@@ -12,9 +12,8 @@ SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS)
 ## Usage
 
 An example trace file is added to learn back an emergency alert system (eas) formula. 
-The trace file contains few positive and negative traces that uses a format described 
-below and exists under the repository:
-[SySLite/eas-example/](https://github.com/CLC-UIowa/SySLite/tree/master/eas-example)
+The trace [file](https://github.com/CLC-UIowa/SySLite/tree/master/eas-example) contains  
+positive and negative traces that uses a format described below.
 
 Please use the command to run eas trace example using `bit-vector SyGuS` encoding:
 
@@ -72,7 +71,7 @@ The details about the experiments are described in the undermentioned paper. The
 
 ### Reference:
 
-"SYSLITE: Syntax-Guided Synthesis of PLTL Formulas from Finite Traces", FMCAD20 [under review]
+"SYSLITE: Syntax-Guided Synthesis of PLTL Formulas from Finite Traces", FMCAD20 [accepted]
 
 
 
