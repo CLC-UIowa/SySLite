@@ -11,42 +11,44 @@ SysLite makes use of decision and synthesis procedures (\ie SAT, SMT, and SyGuS)
 
 ## Usage
 
-An example trace file contains a set of positive and negative traces to learn an emergency alert system (eas) formula. 
-The trace file use a format that is described below and exists under the repository:
+An example trace file is added to learn back an emergency alert system (eas) formula. 
+The trace file contains few positive and negative traces that uses a format described 
+below and exists under the repository:
 [SySLite/eas-example/](https://github.com/CLC-UIowa/SySLite/tree/master/eas-example)
 
-Please use the command to run eas trace example using bit-vector SyGuS encoding:
+Please use the command to run eas trace example using `bit-vector SyGuS` encoding:
 
 `./Driver.py -n 5 -r t.txt -a bv_sygus -dict -t eas-example/eas.trace`
 
-Please use the command to run eas trace example using ADT SyGuS encoding:
+Please use the command to run eas trace example using `ADT SyGuS` encoding:
 
 `./Driver.py -n 5 -r t.txt -a adt_sygus -dict -t eas-example/eas.trace`
 
-Please use the command to run eas trace example using ADT SMT2 encoding:
+Please use the command to run eas trace example using `ADT SMT2` encoding:
 
 `./Driver.py -n 5 -r t.txt -a fin_adt -dict -t eas-example/eas.trace`
 
-Please use the command to run eas trace example using SAT-encoding with enumeration mode on:
+Please use the command to run eas trace example using `SAT-encoding with enumeration` mode `on`:
 
 `./Driver.py -n 5 -r t.txt -a sat_enum -dict -t eas-example/eas.trace`
 
-Please use the command to run eas trace example using SAT-encoding with enumeration mode off:
+Please use the command to run eas trace example using `SAT-encoding with enumeration` mode `off`:
 
 `./Driver.py -s 7 -r t.txt -a sat -dict -t eas-example/eas.trace`
 
-Please use the command to run eas trace example using Guided SAT Enumerator enumeration mode on:
+Please use the command to run eas trace example using `Guided SAT Enumerator enumeration` mode `on`:
 
 `./Driver.py -n 5 -r t.txt -a guided_sat_enum -dict -t eas-example/eas.trace` 
 
-Please use the command to run eas trace example using Guided SAT Enumerator wiht enumeration mode off:
+Please use the command to run eas trace example using `Guided SAT Enumerator with enumeration` mode `off`:
 
 `./Driver.py -s 3 -r t.txt -a guided_sat -t eas-example/eas.trace` 
 
-The Default Solver is (Z3) but user can switch to any other solver supported by py-smt:
+The Default Solver is (Z3) but user can switch to any other solver supported by `py-smt`:
 
 `./Driver.py -n 10 -r t.txt -a sat_enum -dict -t eas-example/eas.trace -solver msat`
 
+##Supported Algorithms:
 The tool currently supports a list of algorithms and options:
 
 1. SyGus + BitVector + enumeration `bv_sygus`  
