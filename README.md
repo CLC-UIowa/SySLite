@@ -20,7 +20,7 @@ Please use the command to run eas trace example using `bit-vector SyGuS` encodin
 `./Driver.py -n 5 -r t.txt -a bv_sygus -dict -t eas-example/eas.trace`
 
 ## Supported Algorithms:
-The tool currently supports a list of algorithms that can be invoked with '-a' option:
+The tool currently supports a list of algorithms that can be invoked with `-a` option:
 
 1. SyGus + BitVector + enumeration `bv_sygus`  
 2. SyGuS + ADT + enumeration `adt_sygus` 
