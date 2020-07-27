@@ -6,7 +6,7 @@ Use of this source code is governed by a BSD 3-Clause License that
 can be found in the LICENSE file.
 '''
 
-from edu.uiowa.alogritms.SATMethod import run_sat_algo, run_enum_sat_algo, run_guided_sat_algo, run_guided_sat_enum_algo
+from edu.uiowa.alogritms.SATMethod import run_sat_algo, run_enum_sat_algo, run_guided_sat_algo, run_guided_sat_enum_algo, run_sat_algo_bound
 from edu.uiowa.alogritms.DecisionTreeMethod import run_dt_algo, run_scikit_dt_algo
 from edu.uiowa.alogritms.SyGuSMethod import run_adt_sygus_algo, run_bv_sygus_algo
 from edu.uiowa.alogritms.SMTMethod import run_adt_fin_algo
@@ -45,6 +45,9 @@ def synthesize_pLTL(_size, _count, AP_Lit, _algo_type, solver_type, result_file,
     
     elif _algo_type == 'sat_enum' :
         _result = run_enum_sat_algo(_size, _count, benign_traces, rejected_traces, unary_operators, binary_operators, AP_Lit, solver_type)    
+
+    elif _algo_type == 'sat_bound' :
+        _result = run_sat_algo_bound(_size, 1, benign_traces, rejected_traces, unary_operators, binary_operators, AP_Lit, solver_type)    
 
     elif _algo_type == 'guided_sat' :
         _result = run_guided_sat_algo(_size, _count, benign_traces, rejected_traces, unary_operators, binary_operators, AP_Lit, solver_type)    

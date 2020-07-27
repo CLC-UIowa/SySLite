@@ -51,3 +51,7 @@ class SATSolver:
             print("UNSAT-Core size '%d'" % len(ucore))
         for f in ucore:
             print(f.serialize())
+            
+    def clear_solver(self):        
+        self.solver.exit() 
+#        print("Clearing and closing the solver")       

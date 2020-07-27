@@ -68,11 +68,13 @@ def run_sat_algo(_length, _count, benign_traces, rejected_traces, unary_ops =  [
         if _count <= len(_result):
             break
         
-
+    
     logging.debug('Checking Synthesize pLTL Formulae...')
-
+    
     eval_result(_result, benign_traces, rejected_traces, _count)
     logging.info('Synthesized Signatures: %s'%(_result))
+    
+    sat_solver.clear_solver()
     
     return _result
 
@@ -122,6 +124,35 @@ def run_enum_sat_algo(_length, _count, benign_traces, rejected_traces, unary_ops
             
     return _results    
 
+
+def run_sat_algo_bound(_length, _count, benign_traces, rejected_traces, unary_ops =  ['!', 'Y', 'O', 'H'], binary_ops = ['S','&', '|', '=>'], AP_Lit = None, solver_type = 'z3'): 
+
+    start_time = timeit.default_timer()
+    
+    _results = []
+
+    c = len(rejected_traces)
+    while c >= 1:
+        
+        tmp_results = run_enum_sat_algo(_length, _count, benign_traces, rejected_traces, unary_ops, binary_ops, AP_Lit, solver_type)
+        fml = tmp_results[0]
+        logging.info('Formula: %s'%(fml))
+        logging.info('Rejected Traces count: %d'%(c))
+        output = (fml,c)
+        _results.append(output)
+         
+        rejected_traces.pop()   
+        c = len(rejected_traces)
+
+
+
+#    stop = timeit.default_timer()
+#    elasped_time = ('%.2f')%(stop - start_time)
+    
+#    logging.info('Total Running Time: %s seconds'%(elasped_time))
+
+            
+    return _results    
 
 def run_guided_sat_enum_algo(_length, _count, benign_traces, rejected_traces, unary_ops =  ['!', 'Y', 'O', 'H'], binary_ops = ['S','&', '|', '=>'], AP_Lit = None, solver_type = 'z3'): 
     
