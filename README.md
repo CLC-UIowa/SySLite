@@ -6,9 +6,9 @@ SysLite makes use of decision and synthesis procedures (\ie `SAT`, `SMT`, and `S
 ## Build & Test
 
 1. To build: `./tool-setup` 
-2. To enable execution `source env/bin/activate`
+2. To enable execution: `source env/bin/activate`
 3. To run: `./src/Driver.py --help`
-4. To disable execution `deactivate`
+4. To disable execution: `deactivate`
 
 ## Usage
 
