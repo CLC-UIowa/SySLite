@@ -18,9 +18,13 @@ from edu.uiowa.utils.FileReader import read_traces_1
 from edu.uiowa.utils.Printer import eval_result
 
 import sys
+import warnings
 import timeit
+import logging
 
 def setup_logging(logging_level):
+      
+    warnings.filterwarnings("ignore", category=FutureWarning)  
     
     logger = logging.getLogger()
     logger.setLevel(logging_level)
