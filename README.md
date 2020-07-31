@@ -4,13 +4,16 @@
 SysLite makes use of decision and synthesis procedures (\ie `SAT`, `SMT`, and `SyGuS`) to learn `Pastime LTL formulas` from a finite set of example traces. These example traces describe the intended and unintended behavior in terms of positive and negative traces that can come from various application domains (i.e, security policy logs, protocols, and execution of a system or design model, among others). 
  
 ## Build & Test
+Open command Terminal:
 
 1. To build: `./tool-setup` (Note: some machines may require running `apt-get install python3-venv` before `tool-setup`)
    * Continue? [Y]es/[N]o: Y 
+   * Run once to setup the tool.  
 2. To enable execution: `source env/bin/activate`
+   * Required before executing the tool on a new terminal.  
 3. To run: `./src/Driver.py --help`
 4. To disable execution: `deactivate`
-
+    
 ## Usage
 
 An example trace file is added to learn back an emergency alert system (eas) formula. 
