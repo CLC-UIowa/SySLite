@@ -20,11 +20,7 @@ from edu.uiowa.utils.Printer import eval_result
 import sys
 import timeit
 
-import warnings
-
 def setup_logging(logging_level):
-
-    warnings.filterwarnings("ignore", category=FutureWarning)
     
     logger = logging.getLogger()
     logger.setLevel(logging_level)
