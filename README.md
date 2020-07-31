@@ -8,7 +8,7 @@ Open command Terminal:
 
 1. To build: `./tool-setup` (Note: some machines may require running `apt-get install python3-venv` before `tool-setup`)
    * Continue? [Y]es/[N]o: Y 
-   * Run once to setup the tool.  
+   * Only required once to setup the tool  
 2. To enable execution: `source env/bin/activate`
    * Required before executing the tool on a new terminal.  
 3. To run: `./src/Driver.py --help`
@@ -22,7 +22,7 @@ positive and negative traces that uses a format described below.
 
 Please use the command to run eas trace example using `bit-vector SyGuS` encoding:
 
-`./src/Driver.py -n 5 -r t.txt -a bv_sygus -dict -t eas-example/eas.trace`
+`./src/Driver.py -n 5 -r result.txt -a bv_sygus -dict -t eas-example/eas.trace`
 
 ## Supported Algorithms:
 The tool currently supports a list of algorithms that can be invoked with `-a` option:
