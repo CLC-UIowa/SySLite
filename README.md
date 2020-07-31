@@ -2,10 +2,10 @@
 <sub>Syntax-Guided Past-time LTL Synthesizer & Enumerator</sub>
 
 SysLite makes use of decision and synthesis procedures (\ie `SAT`, `SMT`, and `SyGuS`) to learn `Pastime LTL formulas` from a finite set of example traces. These example traces describe the intended and unintended behavior in terms of positive and negative traces that can come from various application domains (i.e, security policy logs, protocols, and execution of a system or design model, among others). 
-
+ 
 ## Build & Test
 
-1. To build: `./tool-setup` 
+1. To build: `./tool-setup` (some machines require running `apt-get install python3-venv` before `tool-setup`)
 2. To enable execution: `source env/bin/activate`
 3. To run: `./src/Driver.py --help`
 4. To disable execution: `deactivate`
