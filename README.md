@@ -6,13 +6,13 @@ SysLite makes use of decision and synthesis procedures (\ie `SAT`, `SMT`, and `S
 ## Build & Test
 Run commands on Terminal:
 
-1. To build: `./tool-setup` (Note: some machines may require running `apt-get install python3-venv` before `tool-setup`)
+1. Build: `./tool-setup` (Note: some machines may require running `apt-get install python3-venv` before `tool-setup`)
    * Continue? [Y]es/[N]o: Y 
    * Only required once to setup the tool  
-2. To enable execution: `source env/bin/activate`
+2. Enable execution: `source env/bin/activate`
    * Required before executing the tool on a new terminal.  
-3. To run: `./src/Driver.py --help`
-4. To disable execution: `deactivate`
+3. Run: `./src/Driver.py --help`
+4. Disable execution: `deactivate`
     
 ## Usage
 
