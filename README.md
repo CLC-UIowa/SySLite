@@ -19,7 +19,7 @@ positive and negative traces that uses a format described below.
 
 Please use the command to run eas trace example using `bit-vector SyGuS` encoding:
 
-`./Driver.py -n 5 -r t.txt -a bv_sygus -dict -t eas-example/eas.trace`
+`./src/Driver.py -n 5 -r t.txt -a bv_sygus -dict -t eas-example/eas.trace`
 
 ## Supported Algorithms:
 The tool currently supports a list of algorithms that can be invoked with `-a` option:
