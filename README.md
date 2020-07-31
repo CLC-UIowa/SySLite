@@ -6,7 +6,7 @@ SysLite makes use of decision and synthesis procedures (\ie `SAT`, `SMT`, and `S
 ## Build & Test
 Run commands on Terminal:
 
-1. Build: `./tool-setup` (Note: some machines may require running `apt-get install python3-venv` before `tool-setup`)
+1. Build: `./tool-setup` (some machines may require running `apt-get install python3-venv` before `tool-setup`)
    * Continue? [Y]es/[N]o: Y 
    * Only required once to setup the tool  
 2. Enable execution: `source env/bin/activate`
