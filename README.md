@@ -81,7 +81,6 @@ The training and test data include results are contained in [Experiments](https:
 
 ### Reference:
 
-"SYSLITE: Syntax-Guided Synthesis of PLTL Formulas from Finite Traces", FMCAD20 [accepted]
-
+Report: ["SYSLITE: Syntax-Guided Synthesis of PLTL Formulas from Finite Traces"](https://github.com/CLC-UIowa/SySLite/blob/master/tech-report.pdf), FMCAD20 [accepted]
 
 
