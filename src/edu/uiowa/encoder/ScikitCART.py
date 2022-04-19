@@ -8,14 +8,9 @@ can be found in the LICENSE file.
 
 from sklearn.metrics import accuracy_score 
 from sklearn import tree
-
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, export_text
 import numpy as np
-
 from graphviz import Source
-
-#from scikit.tree import export_text
-from sklearn.tree.export import export_text
 
 from edu.uiowa.parser.Formula import PLTLFormula
 
