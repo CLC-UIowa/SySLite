@@ -24,6 +24,8 @@ Please use the command to run eas trace example using `bit-vector SyGuS` encodin
 
 `./src/Driver.py -n 5 -r result.txt -a bv_sygus -dict -t eas-example/eas.trace`
 
+`./src/Driver.py -n 5 -r result.txt -a bv_sygus -dict -t eas-example/eas.json`
+
 ![](resources/recorded-syslite.gif)
 
 ## Supported Algorithms:
