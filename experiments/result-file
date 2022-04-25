@@ -1,9 +1,0 @@
-policy=$1
-type=$2
-f=$3
-fpath=$4
-size=$5
-resulfile=$fpath$f/$type\_$f\_$size.eval
-echo $resulfile
-
-

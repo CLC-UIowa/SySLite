@@ -1,5 +1,0 @@
-(1) =>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))
-(2) H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing)))
-(3) =>(O(covered_entity_dislcoses_patient_info_for_marketing),O(receive_patient_authorization_marketing))
-(4) |(covered_entity_dislcoses_patient_info_for_marketing,H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))))
-(5) =>(covered_entity_dislcoses_patient_info_for_marketing,H(=>(covered_entity_dislcoses_patient_info_for_marketing,O(receive_patient_authorization_marketing))))

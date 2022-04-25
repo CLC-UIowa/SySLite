@@ -1,5 +1,0 @@
-(1) !(identity_request_not_well_formed)
-(2) H(!(identity_request_not_well_formed))
-(3) !(Y(identity_request_not_well_formed))
-(4) !(S(authentication_request,identity_request_not_well_formed))
-(5) !(S(detach_request,identity_request_not_well_formed))

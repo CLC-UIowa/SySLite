@@ -1,5 +1,0 @@
-(1) !(authentication_failure)
-(2) =>(authentication_failure,!(authentication_failure))
-(3) =>(authentication_failure,Y(authentication_failure))
-(4) =>(authentication_failure,H(authentication_failure))
-(5) =>(authentication_failure,security_mode_command)

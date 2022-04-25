@@ -16,10 +16,13 @@ class Trace:
     #Adopt the trace format suggested by Daniel Neider & Garvan
     def __init__(self, data, Id, Lit = None):
         self.Id = Id
-        self.traceVector = [[self.str2bool(var) for var in timeStamp.split(',')] for timeStamp in data.split(';')] 
+        if "," in data: #CSV format
+            self.traceVector = [[self.str2bool(var) for var in timeStamp.split(',')] for timeStamp in data.split(';')] 
+        else: #JSON format
+            self.traceVector = data
         self.traceLength = len(self.traceVector)
         self.vars = len(self.traceVector[0])
-         
+
         if Lit is None:
             self.literals = ['p' + str(i) for i in range(self.vars)]
         else:

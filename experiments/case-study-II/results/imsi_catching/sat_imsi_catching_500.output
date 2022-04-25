@@ -1,5 +1,0 @@
-(1) !(identity_request_IMSI)
-(2) !(S(identity_request_IMSI,identity_request_IMSI))
-(3) !(|(identity_request_IMSI,identity_request_IMSI))
-(4) =>(identity_request_IMSI,identity_request)
-(5) =>(identity_request_IMSI,authentication_response)

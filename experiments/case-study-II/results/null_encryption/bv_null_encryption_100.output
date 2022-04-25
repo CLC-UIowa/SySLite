@@ -1,5 +1,0 @@
-(1) !(MME_null_encryption_chosen)
-(2) H(!(MME_null_encryption_chosen))
-(3) !(Y(MME_null_encryption_chosen))
-(4) !(|(UE_null_encryption_supported,MME_null_encryption_chosen))
-(5) !(S(security_mode_complete,MME_null_encryption_chosen))

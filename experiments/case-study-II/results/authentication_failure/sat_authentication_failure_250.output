@@ -1,5 +1,0 @@
-(1) !(authentication_failure)
-(2) =>(authentication_failure,identity_request)
-(3) =>(authentication_failure,detach_accept)
-(4) =>(authentication_failure,security_mode_command)
-(5) =>(authentication_failure,!(authentication_failure))

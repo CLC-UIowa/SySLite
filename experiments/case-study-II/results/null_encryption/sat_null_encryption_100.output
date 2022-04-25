@@ -1,5 +1,0 @@
-(1) !(MME_null_encryption_chosen)
-(2) =>(MME_null_encryption_chosen,tracking_area_update_accept)
-(3) =>(MME_null_encryption_chosen,tracking_area_update_complete)
-(4) =>(MME_null_encryption_chosen,tracking_area_update_request)
-(5) S(!(MME_null_encryption_chosen),!(MME_null_encryption_chosen))

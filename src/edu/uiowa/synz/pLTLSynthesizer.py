@@ -7,7 +7,7 @@ can be found in the LICENSE file.
 '''
 
 from edu.uiowa.alogritms.SATMethod import run_sat_algo, run_enum_sat_algo, run_guided_sat_algo, run_guided_sat_enum_algo
-from edu.uiowa.alogritms.DecisionTreeMethod import run_dt_algo, run_scikit_dt_algo
+#from edu.uiowa.alogritms.DecisionTreeMethod import run_dt_algo, run_scikit_dt_algo
 from edu.uiowa.alogritms.SyGuSMethod import run_adt_sygus_algo, run_bv_sygus_algo
 from edu.uiowa.alogritms.SMTMethod import run_adt_fin_algo
 

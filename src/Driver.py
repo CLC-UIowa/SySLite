@@ -15,6 +15,8 @@ given set finite traces.
 from edu.uiowa.synz.pLTLSynthesizer import synthesize_pLTL
 from edu.uiowa.utils.CmdLine import cmd_parser, parse_sig_options
 from edu.uiowa.utils.FileReader import read_traces_1
+from edu.uiowa.utils.JSONReader import read_traces_json
+
 from edu.uiowa.utils.Printer import eval_result
 
 import sys
@@ -59,7 +61,11 @@ if __name__ == "__main__":
     else:
         print('Dictionary Support Disabled')
 
-    AP_Lit, benign_traces, rejected_traces, unary_operators, binary_operators, _nsize, target_fml, max_trace_length = read_traces_1(trace_file, _dict_support)
+    if trace_file.name.endswith('.json'):
+        AP_Lit, benign_traces, rejected_traces, unary_operators, binary_operators, _nsize, target_fml, max_trace_length = read_traces_json(trace_file)
+    else:
+
+        AP_Lit, benign_traces, rejected_traces, unary_operators, binary_operators, _nsize, target_fml, max_trace_length = read_traces_1(trace_file, _dict_support)
     
     synthesize_pLTL(_size, _count, AP_Lit, _algo_type, solver_type, result_file, trace_file, benign_traces, rejected_traces, unary_operators, binary_operators, _nsize, target_fml, max_trace_length)
             

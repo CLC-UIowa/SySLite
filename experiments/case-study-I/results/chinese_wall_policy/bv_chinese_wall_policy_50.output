@@ -1,5 +1,0 @@
-(1) !(&(access_org1_records,O(access_org2_records)))
-(2) !(&(access_org1_records,S(access_org1_records,access_org2_records)))
-(3) =>(S(O(access_org1_records),access_org2_records),access_org2_records)
-(4) =>(S(O(access_org2_records),access_org1_records),access_org1_records)
-(5) H(!(&(access_org1_records,O(access_org2_records))))

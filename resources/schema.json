@@ -1,0 +1,33 @@
+{
+  "title": "Traces",
+  "description": "Samples for both positive and negative traces",
+  "type": "object",
+  "properties": {
+    "propositions": {
+      "description": "Atoms (atomic propositions)",
+      "type": "array"
+    },
+    "traces_pos": {
+      "description": "Positive Traces",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "contains": {
+          "type": "integer"
+        }
+      }
+    },
+    "traces_neg": {
+      "description": "Positive Traces",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "contains": {
+          "type": "integer"
+        }
+      }
+    }
+
+  }
+}
+  

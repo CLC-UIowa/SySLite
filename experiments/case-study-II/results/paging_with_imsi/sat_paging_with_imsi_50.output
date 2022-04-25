@@ -1,5 +1,0 @@
-(1) !(|(paging_IMSI_and_TMSI,paging_IMSI))
-(2) !(|(paging_IMSI,paging_IMSI_and_TMSI))
-(3) =>(|(paging_IMSI_and_TMSI,paging_IMSI),dlInformationTransfer)
-(4) =>(|(paging_IMSI,paging_IMSI_and_TMSI),csfbParametersRequestCDMA2000)
-(5) =>(|(paging_IMSI,paging_IMSI_and_TMSI),ueCapabilityInformation)
