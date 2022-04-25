@@ -1,5 +1,0 @@
-(1) =>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes))
-(2) H(=>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes)))
-(3) =>(covered_entity_dislcoses_patient_psych_notes,S(=>(authorization_psych_notes_revoked,H(covered_entity_dislcoses_patient_psych_notes)),receive_patient_authorization_psych_notes))
-(4) H(=>(covered_entity_dislcoses_patient_psych_notes,S(=>(authorization_psych_notes_revoked,H(covered_entity_dislcoses_patient_psych_notes)),receive_patient_authorization_psych_notes)))
-(5) =>(covered_entity_dislcoses_patient_psych_notes,H(=>(covered_entity_dislcoses_patient_psych_notes,S(!(authorization_psych_notes_revoked),receive_patient_authorization_psych_notes))))

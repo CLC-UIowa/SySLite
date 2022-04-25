@@ -1,5 +1,0 @@
-(1) =>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure))
-(2) S(!(customer_opt_out),=>(institution_dislcloses_to_affiliate_customers_npi,notice_of_disclosure))
-(3) H(=>(institution_dislcloses_to_affiliate_customers_npi,S(!(customer_opt_out),notice_of_disclosure)))
-(4) =>(institution_dislcloses_to_affiliate_customers_npi,&(O(notice_of_disclosure),=>(customer_opt_out,notice_of_disclosure)))
-(5) =>(institution_dislcloses_to_affiliate_customers_npi,&(S(institution_dislcloses_to_affiliate_customers_npi,notice_of_disclosure),=>(customer_opt_out,notice_of_disclosure)))

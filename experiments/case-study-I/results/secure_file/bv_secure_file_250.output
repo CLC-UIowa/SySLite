@@ -1,2 +1,0 @@
-(1) =>(secure_file_open,Y(S(!(secure_file_open),=>(Y(TRUE),secure_file_closed))))
-(2) =>(secure_file_open,Y(S(!(secure_file_open),=>(O(secure_file_open),secure_file_closed))))

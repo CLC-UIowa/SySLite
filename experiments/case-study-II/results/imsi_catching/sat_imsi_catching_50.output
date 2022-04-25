@@ -1,5 +1,0 @@
-(1) !(identity_request_IMSI)
-(2) =>(identity_request_IMSI,extended_service_request)
-(3) =>(identity_request_IMSI,identity_request_IMEI)
-(4) =>(identity_request_IMSI,identity_response)
-(5) =>(identity_request_IMSI,attach_accept)

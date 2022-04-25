@@ -1,2 +1,0 @@
-(1) =>(measurementReport,S(!(rrcConnectionSetup),securityModeCommand))
-(2) H(=>(measurementReport,S(!(rrcConnectionSetup),securityModeCommand)))

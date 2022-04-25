@@ -1,5 +1,0 @@
-(1) !(identity_request_not_well_formed)
-(2) =>(identity_request_not_well_formed,H(identity_request_not_well_formed))
-(3) =>(identity_request_not_well_formed,Y(identity_request_not_well_formed))
-(4) =>(identity_request_not_well_formed,!(identity_request_not_well_formed))
-(5) =>(identity_request_not_well_formed,service_request)
