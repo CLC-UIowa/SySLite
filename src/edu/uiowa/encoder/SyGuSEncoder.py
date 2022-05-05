@@ -199,7 +199,33 @@ class BVEncoder:
             bv_def = bv_def.replace(';%{4}', enum_traces(self.neg_traces, self.nvars, False, self.vars))
         
         return bv_def 
+
+    def bv_sygus_latest_def_impl(self, bv_def):
     
+        #Variables 
+#        print('0000000000000000000000000000000*********', self.vars)
+        bv_def = bv_def.replace(';%{1}', define_streams(self.vars))    
+
+        #Variables in SyGus Grammar
+        bv_def = bv_def.replace(';%{2}', define_vars_stream(self.AP))
+
+        bv_def = bv_def.replace(';%{2a}', define_vars_stream_atomic(self.AP))
+
+        #Trace Length 
+#        bv_def = bv_def.replace(';%{3}', define_vars_stream(self.nvars, self.AP))        
+           
+#        #Trace Length 
+#        bv_def = bv_def.replace(';%{3}', define_vars(self.nvars, self.AP))        
+            
+        #Trace Values
+        bv_def = bv_def.replace(';%{3}', enum_traces(self.pos_traces, self.nvars, True, self.vars))
+             
+        #Length of Positive Trace
+        if len(self.neg_traces) > 0:
+            bv_def = bv_def.replace(';%{4}', enum_traces(self.neg_traces, self.nvars, False, self.vars))
+        
+        return bv_def 
+
     def bv_sygus_non_recur_def(self, bv_def):
     
         #Variables 
@@ -262,6 +288,12 @@ def define_vars_stream(AP=[]):
         v_stream = '(%s Stream)'%(v)
         stream_vars.append(v_stream)
     vars_stream = ' '.join(stream_vars)
+    
+    return vars_stream 
+
+def define_vars_stream_atomic(AP=[]):
+    
+    vars_stream = ' '.join(AP)
     
     return vars_stream 
 

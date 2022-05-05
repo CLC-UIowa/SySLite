@@ -193,7 +193,7 @@ class BVTreeToFormula(Transformer):
         def variable(self, cname):
             var = cname[0]
             if var in self.var_dict:
-               return self.var_dict[var]     
+               var = self.var_dict[var]      
             return PLTLFormula([var, None, None])
                         
         def binary_op(self, args):
@@ -217,10 +217,10 @@ class BVTreeToFormula(Transformer):
 
         def let_exp(self, args):
 
-           # print(">>>>>>>>",args, args)
+            print(">>>>>>>>",args, args)
             key = str(args[0])
             value =  args[1]
-            self.var_dict[key] =  value
+            self.var_dict[key] =  str(value)
             print(self.var_dict)
 #            self.let_vars.add(args[0], args[1])
 

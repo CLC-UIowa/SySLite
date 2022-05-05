@@ -75,6 +75,16 @@ def synthesize_pLTL(_size, _count, AP_Lit, _algo_type, solver_type, result_file,
         sygus_def_file = open(def_file, 'rt')
         _result = run_bv_sygus_algo(sygus_def_file, _size, _count, trace_file, benign_traces, rejected_traces, unary_operators, binary_operators, max_trace_length, AP_Lit)
 
+    elif _algo_type == 'bv_sygus_ap_impl' :
+        def_file = os.path.abspath('resources/bv-sygus-atomic-impl.sy')
+        sygus_def_file = open(def_file, 'rt')
+        _result = run_bv_sygus_algo(sygus_def_file, _size, _count, trace_file, benign_traces, rejected_traces, unary_operators, binary_operators, max_trace_length, AP_Lit)
+
+    elif _algo_type == 'bv_sygus_ge_impl' :
+        def_file = os.path.abspath('resources/bv-sygus-generic-impl.sy')
+        sygus_def_file = open(def_file, 'rt')
+        _result = run_bv_sygus_algo(sygus_def_file, _size, _count, trace_file, benign_traces, rejected_traces, unary_operators, binary_operators, max_trace_length, AP_Lit)
+
     else:
         logging.warn('Correct Synthesizing algorithm is not selected! -- Please select one')    
     

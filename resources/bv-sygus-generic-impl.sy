@@ -1,0 +1,90 @@
+;; Copyright (c) 2020, Board of Trustees of the University of Iowa.
+;; All rights reserved.
+;;
+;; Use of this source code is governed by a BSD 3-Clause License that
+;; can be found in the LICENSE file.
+
+(set-logic BV)
+(set-option :sygus-out status-and-def)
+(set-option :e-matching false)
+
+;Trace length 
+;%{1}
+
+(define-fun S_FALSE () Stream ZERO)
+(define-fun S_TRUE () Stream (bvnot S_FALSE))
+
+; Yesterday: X << 1
+(define-fun
+  Y ( (X Stream) ) Stream
+  (bvshl X ONE)
+)
+
+; Once: X|-X
+(define-fun
+  O ( (X Stream) ) Stream
+  (bvor X (bvneg X))
+)
+
+; Historically: X & ~(1 + X)
+(define-fun
+  H ( (X Stream) ) Stream
+  (bvand X (bvnot (bvadd ONE X)))
+)
+
+; Since: Z | (X & ~((X | Z) + Z))
+(define-fun
+S ( (X Stream) (Z Stream) ) Stream
+  (bvor Z
+    (bvand X 
+      (bvnot (bvadd  (bvor X Z) Z ))
+    )
+  )
+)
+
+(define-fun
+  bvimpl ( (X Stream) (Z Stream) ) Stream
+  (bvor (bvnot X) Z)
+)
+
+(synth-fun phi (;%{2}) Stream
+   ((<T> Stream) (<F> Stream) (<G> Stream) (<P> Stream))
+   ((<T> Stream (
+     (bvimpl <G> <F>)
+    ))
+   (<F> Stream (
+     S_TRUE 
+     S_FALSE
+     <P>
+     (bvnot <F>)
+     (bvand <F> <F>) 
+     (bvor <F> <F>)
+     (bvimpl <F> <F>)
+     (Y <F>)
+     (O <F>)
+     (H <F>)
+     (S <F> <F>)
+   ))
+   (<G> Stream (
+     S_TRUE 
+     S_FALSE
+     <P>
+     (bvnot <G>)
+     (bvand <G> <G>) 
+     (bvor <G> <G>)
+     (bvimpl <G> <G>)
+   ))
+   (<P> Stream (;%{2a}))
+   )
+)
+
+;; Positive examples
+;Positive Trace Data
+;%{3}
+
+;; Negative examples
+
+;Negative Trace Data
+;%{4}
+
+(check-synth)
