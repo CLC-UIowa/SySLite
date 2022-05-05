@@ -73,7 +73,7 @@ S,&,|,=> (\* Enable Binary Operators in Final Formula (Optional) \*)
 ---
 3	(\* Synthesized Formula Size (Optional) \*)
 ---
-S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
+S(Y(q),q)	(\* Target Formula for Match (Optional) \*)
 ```
 
 ## Experiments:
