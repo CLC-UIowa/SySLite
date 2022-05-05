@@ -72,7 +72,7 @@ def run_bv_sygus_algo(_BV_Def_file, _size, _count, trace_file, benign_traces, re
     
     _bv_def = _BV_Def_file.read() 
     
-    _bv_def = _syngus.bv_sygus_latest_def(_bv_def)
+    _bv_def = _syngus.bv_sygus_latest_def_impl(_bv_def)
     
     result = run_sygus(_bv_def, start_time, trace_file, _count)
 

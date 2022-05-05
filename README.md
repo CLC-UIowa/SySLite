@@ -29,7 +29,9 @@ Please use the command to run eas trace example using `bit-vector SyGuS` encodin
 ## Supported Algorithms:
 The tool currently supports a list of algorithms that can be invoked with `-a` option:
 
-1. SyGus + BitVector + enumeration `bv_sygus`  
+1. SyGus + BitVector + enumeration `bv_sygus`
+   1. SyGus + BitVector + enumeration + implication shape (atomic prop.) `bv_sygus_ap_impl` 
+   2. SyGus + BitVector + enumeration + implication shape (generic fml) `bv_sygus_ge_impl`  
 2. SyGuS + ADT + enumeration `adt_sygus` 
 3. SMT + ADT + enumeration `fin_adt`
 4. SAT - enumeration `sat`  

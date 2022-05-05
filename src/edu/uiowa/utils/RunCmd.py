@@ -40,7 +40,7 @@ def run_sygus(_adt_def, start_time, trace_file,  max_loop = 2, bv_encoding = Tru
     
     cmd = list(cmd.split(' '))
 
-    logging.info('Running SyGuS(CVC4)...')
+    logging.info('Running CVC4SY...')
             
     return run_cmd(cmd, max_loop, start_time, bv_encoding)
     
