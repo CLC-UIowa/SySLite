@@ -24,6 +24,8 @@ Please use the command to run eas trace example using `bit-vector SyGuS` encodin
 
 `./src/Driver.py -n 5 -r result.txt -a bv_sygus -dict -t eas-example/eas.trace`
 
+`./src/Driver.py -n 5 -r result.txt -a bv_sygus -dict -t eas-example/eas.json`
+
 ![](resources/recorded-syslite.gif)
 
 ## Supported Algorithms:
@@ -73,7 +75,7 @@ S,&,|,=> (\* Enable Binary Operators in Final Formula (Optional) \*)
 ---
 3	(\* Synthesized Formula Size (Optional) \*)
 ---
-S(Y(p2),p2)	(\* Target Formula for Match (Optional) \*)
+S(Y(q),q)	(\* Target Formula for Match (Optional) \*)
 ```
 
 ## Experiments:
